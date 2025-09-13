@@ -1,14 +1,14 @@
 # Site settings
-title: Kasper Atkinson - Engineering Portfolio
-email: kna37@cornell.edu
+title: Ishan Roy - Engineering Portfolio
+email: irr4@cornell.edu
 description: >- # this means to ignore newlines until "baseurl:"
   A brief description of your portfolio and your skills.
-baseurl: "/Kasper-Atkinson-Portfolio" # the subpath of your site, e.g. /blog. For GitHub Pages user sites, this is often blank.
-url: "https://ubilot3000.github.io" # the base hostname & protocol for your site, e.g. http://example.com. For GitHub Pages, it will be like https://username.github.io
+baseurl: "/Ishan-Roy-Portfolio" # the subpath of your site, e.g. /blog. For GitHub Pages user sites, this is often blank.
+url: "https://ishanr254.github.io" # the base hostname & protocol for your site, e.g. http://example.com. For GitHub Pages, it will be like https://username.github.io
 
 # Author/Social
 author:
-  name: Kasper Atkinson # Update this from "Your Name"
+  name: Ishan Roy # Update this from "Your Name"
   # twitter_username: yourtwitter
   # github_username:  yourgithub
 

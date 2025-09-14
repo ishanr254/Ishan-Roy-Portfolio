@@ -4,79 +4,120 @@ title: Curriculum Vitae
 permalink: /cv/
 ---
 
-## Education
-  - **Cornell University**  
-    *M.Eng. Aerospace Engineering, B.S. Mechanical Engineering*  
-    GPA: 4.1/4.0 | Graduation: May, 2027
+<div class="resume" markdown="1">
 
----
-
-## Work Experience
-
-  - **Imperial College London - Microglider Design Researcher**  
-    June, 2025 - August, 2025  
-    - Developed MATLAB-based aerodynamic models for a dragonfly-inspired, tailless tandem-wing 22-gram microglider.
-    - Simulated a mass-shifting pitch control system using PID feedback to achieve sub-10-second stable glide recovery.
-    - Ran multi-parameter design sweeps to optimize lift-to-drag ratio while maintaining static and dynamic stability.
-    - Evaluated 3 trim–linearization methods, judging speed-accuracy tradeoffs to extract short-period and phugoid modes.
-
-
-  - **Comarch - Forecasting Analytics Intern**  
-    June, 2024 - July, 2024  
-    - Delivered ML script combining individually weighted and optimized prediction models to forecast server utilization. 
-    - Co-developed program to securely retrieve internal company database metrics live for the Comarch Infraspace Cloud. 
-    - Troubleshooted obstacles to internal LLM implementation with the national Polish AI / ML team. 
-    - Suggested future steps for integrating cloud with larger-variable forecasting models in department-wide presentation.  
-
-  - **Cornell Engineering - Undergraduate Teaching Assistant**  
-    August, 2024 - January, 2025
-    - Expanded on key physics concepts from lecture twice a week, co-leading 20-person cooperative learning sections. 
-    - Underwent 15-week training session focusing on differential learning, communicative responses, student engagement.
-      
-  ---
-
-## Organization and Leadership Experience
-
-  - **Cornell Design Build Fly**:
-  
-    *Full-Team Lead*
-    - Directed all engineering and administrative decisions across four subteams for aircraft development with $35k budget.
-    - Co-authored 60-page AIAA technical report, documenting mission-centered design, analysis, fabrication and testing.
-    - Ran 40-person team through 10-month competition cycle: exploration, detailed design, manufacturing, testing.
-
-    
-    *Propulsion Subteam Lead*    
-    - Designed and implemented program to iteratively assess various propulsion and electronic system configurations. 
-    - Led 6-person subteam: delegated, tracked, and supervised tasks in weekly meetings. 
-    - Presented and directed subteam through 3 critical design reviews to justify design and component decisions. 
-    
-    *Member of the Propulsion Subteam* 
-    - Planned and fabricated the electronics integration piece, justified design in 60-page competition report scoring 21st.
-    - Led propeller static thrust tests, ensuring flight function on runway line in Wichita, Kansas 2024 competition.
-
-
-  - **C-Salt**:  
-  *Member of the Mechanical Subteam*  
-    - Co-founded wave-energy student team; grew to 20 members competing in DOE’s Marine Energy Collegiate Contest.
-    - Prepared comprehensive CADs of high-pressure water piston compressor for ocean-water desalination in Guam.
- 
-
-  ---
-
-## Skills
-  - Programming: Python, MATLAB, Java
-  - Software: SolidWorks, Fusion360, ANSYS Fluent, XFLR5, XFoil
-  - Manufacturing: Machine-Shop Trained, 3D Printing
-
-## Languages
-  - English (C2)
-  - Polish (C2)
-  - French (B2)
-  - German (B1)
-
-  <div class="resume-download">
-    <a href="{{ site.baseurl }}\assets\files\KasperAtkinson_CV.pdf" class="download-button" download>
-        Download Resume (PDF)
-    </a>
+## EDUCATION
+<div class="item">
+  <div class="item-header">
+    <div class="left"><strong>Cornell University, College of Engineering, Ithaca, NY</strong></div>
+    <div class="date">Expected Graduation May 2027</div>
   </div>
- 
+  <div class = "role">Sibley School of Mechanical and Aerospace Engineering<br></div>
+  Bachelor of Science in Mechanical Engineering with a Minor in Aerospace Engineering.<br>
+  GPA: 3.52/4.0.
+</div>
+
+## EXPERIENCE
+<div class="item">
+  <div class="item-header">
+    <div class="left"><strong>Cornell Mechanical &amp; Aerospace Engineering, Magnus Ultralight Project</strong> </div>
+    <div class="date">Jan 2025 – present</div>
+  </div>
+  <div class="role"><strong>Team Lead. Advised by Professor Mason Peck and funded by industry partners.</strong></div>
+  <ul>
+    <li>Lead a student research team hoping to develop the first production Magnus Effect-powered ultralight aircraft.</li>
+    <li>Designed a scale VTOL vehicle capable of consistent performance for data collection, utilizing SOLIDWORKS, ANSYS, and MATLAB.</li>
+    <li>Fabricated and flight-tested prototype, conducting ten five-minute hovers while lifting 4 kg of = payload (25% above initial goal).</li>
+    <li>Designed and fabricated a dynamically balanced, gear-driven hub system for 1,500+ RPM Magnus Effect sphere actuation.</li>
+    <li>Targeting Fall 2025 to test prototype using only the Magnus Effect to maintain steady level flight.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="item-header">
+    <div class="left"><strong>CU Design Build Fly (DBF) Project Team. Ithaca, NY</strong></div>
+  </div>
+  Design, build, test, and optimize a radio-controlled aircraft to compete in the AIAA Annual DBF Competition.
+</div>
+
+<div class="item">
+  <div class="item-header">
+    <div class="role"><strong>Full Team Co-Lead</strong></div>
+    <div class="date">May 2025 – present</div>
+  </div>
+  <ul>
+    <li>Direct 40 members across four subteams with a $35k budget. Responsible for technical project management and day-to-day operations.</li>
+    <li>Lead weekly all-hands meetings, subteam leadership meetings, and faculty advisor meetings.</li>
+    <li>Responsible for all engineering decision making and directing the development of the team’s competition aircraft.</li>
+    <li>Encourage team culture and commitment by fostering collaboration across subteams and coordinating regular social mixers.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="item-header">
+    <div class="role"><strong>Mechanical and Structural Subteam Co-Lead</strong></div>
+    <div class="date">Jun 2024 – May 2025</div>
+  </div>
+  <ul>
+    <li>Led a 9-member team responsible for the mechanical and structural subsystems.</li>
+    <li>Designed and fabricated DBF’s first composite fuselage and landing gear structure, reducing aircraft weight by 45%.</li>
+    <li>Successfully met all required project deadlines by coordinating and supervising subteam projects, scheduling, and logistics.</li>
+    <li>Mentored five new team members in aircraft design theory, CAD skills, and aircraft fabrication skills.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="item-header">
+    <div class="role"><strong>Mechanical and Structural Subteam Member</strong></div>
+    <div class="date">Sep 2023 – May 2024</div>
+  </div>
+  <ul>
+    <li>Redesigned aircraft nosecone, utilizing 3D printing and weight-focused design techniques to reduce nose cone mass by 65%.</li>
+    <li>Responsible for nose cone detailed design and landing gear trade studies of technical report (ranked 25/110).</li>
+    <li>Co-headed technical inspection and performed onsite fixes and upgrades to the aircraft at AIAA competition in Kansas.</li>
+  </ul>
+</div>
+
+<div class="item">
+  <div class="item-header">
+    <div class="left"><strong>Mohawk Mountain Alpine Ski Race Team, Cornwall, CT</strong> </div>
+    <div class="date">Mar 2022 – present</div>
+  </div>
+  <div class="role"><strong>Alpine Race Coach</strong></div>
+  <ul>
+    <li>Coached 20 U12 athletes for 2022-2023 season, winning the overall league and sending six athletes to regional championships.</li>
+    <li>Train U10–U16 athletes on return-to-snow techniques in December race camps.</li>
+  </ul>
+</div>
+
+## PROJECTS
+<div class="item">
+  <div class="item-header">
+    <div class="left"><strong>MATLAB Design Optimization Program</strong></div>
+    <div class="date">May 2025 – present</div>
+  </div>
+  <ul>
+    <li>Developed a MATLAB design optimization program to produce theoretical aircraft designs for AIAA DBF competition.</li>
+    <li>Wrote the module to generate a high-fidelity structural model of the aircraft based on the design vector’s input parameters.</li>
+    <li>Cut overall program runtime by 85% by developing a pre-loading script for data tables.</li>
+    <li>Tested algorithm and successfully generated designs scoring in the top 5% of previous competition cycles.</li>
+  </ul>
+</div>
+
+## TECHNICAL SKILLS
+**CAD and Simulation:** <br> SOLIDWORKS (advanced) | ANSYS (Fluent and Static Structural) (intermediate) | MATLAB (advanced).  
+**Programming Languages:** <br> Python (advanced) | HTML/CSS (intermediate). Tools: NumPy | pandas | scikit-learn | Flask | Git.  
+**Hardware:** <br> machining (mill, lathe, bandsaw) (intermediate) | 3D printing (advanced) | soldering (intermediate) | composite fabrication (advanced).  
+**Office/Data:** <br> PowerPoint (advanced) | Excel (intermediate) | Photoshop (intermediate) | Illustrator (intermediate).
+
+{% if site.baseurl %}
+<div class="resume-download">
+  <a href="{{ site.baseurl }}/assets/files/Ishan_Roy.pdf" class="download-button" download>Download Resume (PDF)</a>
+</div>
+{% else %}
+<div class="resume-download">
+  <a href="/assets/files/Ishan_Roy.pdf" class="download-button" download>Download Resume (PDF)</a>
+</div>
+{% endif %}
+
+</div>

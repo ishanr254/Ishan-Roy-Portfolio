@@ -10,7 +10,7 @@ permalink: /coursework/
 - **MAE 3270:** Mechanics of Engineering Materials
 - **MAE 3260:** System Dynamics
 - **MAE 3050:** Introduction to Aeronautics
-- **GERST 2020:** Literary Texts and Contexts
+- **CLASS 2064:** Greek Mythology
 
 ---
 
@@ -20,38 +20,40 @@ permalink: /coursework/
 - **PHYS 2214:** Oscillations, Waves, and Quantum Mechanics
 - **MAE 2250:** Intro to Mechanical Design
 - **MAE 2030:** Dynamics
-- **ENGRD 2700:** Basic Engineering Probability & Statistics
-- **GERST 2000:** Germany: Intercultural Context
+- **MATH 2940:** Linear Algebra for Engineers
+
+
 
 **Fall 2024**
-- **MATH 2940:** Linear Algebra for Engineers
-- **GERST 1220:** Exploring German Contexts II
+- **MATH 2930:** Differential Equations for Engineers
 - **ENGRD 2020:** Statics & Mechanics of Solids
 - **ENGRD 2210:** Thermodynamics
-- **PHYS 4485:** Teaching Experience I
-- **PHYS 4484:** Teaching and Learning Physics
+- **ECON 1120:** Into to Macroeconomics
+- **PE 1104:** Swim Conditioning
+
 
 ---
 
 ## Freshman Year
 
 **Spring 2024**
-- **CRP 1109:** FWS: Cities and Regions
+- **PHYS 1112:** Physics I: Mechanics and Heat
 - **PHYS 1110:** Intro to Experimental Physics
-- **GERST 1210:** Exploring German Contexts I
-- **MATH 2930:** Differential Equations for Engineers
-- **PHYS 2213:** Physics II: Electromagnetism
+- **MATH 1920:** Multivariable Calculus for Engineers
+- **ENGRI 1100:** Intro to Engineering: Lasers & Photonics
+- **GOVT 1101:** FWS: The Politics of Outer Space
 
 **Fall 2023**
 - **CHEM 2090:** Engineering General Chemistry
-- **GERST 1170:** FWS: Marx, Nietzsche, Freud
-- **ENGRI 1270:** Intro to Entrepreneurship for Engineers
-- **MATH 1920:** Multivariable Calculus for Engineers
+- **MATH 1910:** Calculus for Engineers
+- **CS 1110:** Intro to Computing: Design & Development
+- **CLASS 1585:** FWS: The Fall of Rome
+- **PE 1104:** Swim Conditioning
 - **ENGRG 1050:** Engineering Seminar
 
 
 <div class="resume-download">
-    <a href="{{ site.baseurl }}/assets/files/Transcript_Sept25.pdf" class="download-button" download>
+    <a href="{{ site.baseurl }}/assets/files/Roy_Ishan_Transcript Fall 2025.pdf" class="download-button" download>
         Download Transcript (PDF)
     </a>
 </div>

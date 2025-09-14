@@ -8,14 +8,32 @@
 $primary-font: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
 $base-font-size: 16px;
 
-$streamlit-bg: #f0f2f6; // Light grey background
-$streamlit-content-bg: #ffffff; // White for content cards/areas
-$streamlit-sidebar-bg: #ffffff; // Streamlit often has a white sidebar too, or very light grey
-$streamlit-text-color: #262730; // Dark grey for text
-$streamlit-heading-color: #0e1117; // Almost black for main headings
-$streamlit-accent-color: #ff4b4b; // Streamlit's primary accent (can be changed)
-$streamlit-border-color: #e6e6e6; // Light border color
-$streamlit-subtle-text: #555761;
+// $streamlit-bg: #f0f2f6; // Light grey background
+// $streamlit-content-bg: #ffffff; // White for content cards/areas
+// $streamlit-sidebar-bg: #ffffff; // Streamlit often has a white sidebar too, or very light grey
+// $streamlit-text-color: #262730; // Dark grey for text
+// $streamlit-heading-color: #0e1117; // Almost black for main headings
+// $streamlit-accent-color: #ff4b4b; // Streamlit's primary accent (can be changed)
+// $streamlit-border-color: #e6e6e6; // Light border color
+// $streamlit-subtle-text: #555761;
+
+// === Cornell DBF – Big Red Classic (Light)
+$streamlit-bg:            #F8FAFC;  // page background
+$streamlit-content-bg:    #FFFFFF;  // cards/content blocks
+$streamlit-sidebar-bg:    #FFFFFF;
+$streamlit-text-color:    #1F2937;  // slate-800
+$streamlit-heading-color: #0F172A;  // slate-900
+$streamlit-accent-color:  #B31B1B;  // Cornell Red
+$streamlit-accent-hover:  #911515;  // darker for hover/focus
+$streamlit-border-color:  #E5E7EB;  // light gray
+$streamlit-subtle-text:   #6B7280;  // slate-500
+
+// Optional secondary accent (blueprint vibe for charts/tags)
+$secondary-accent-color:  #2563EB;
+
+// Common link/button hooks (if your CSS uses them)
+$streamlit-link-color:    $streamlit-accent-color;
+$streamlit-link-hover:    $streamlit-accent-hover;
 
 // Basic Reset
 body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd, aside, main, header, footer, nav {
@@ -125,6 +143,40 @@ body {
   overflow: hidden; // This ensures floated content is contained
   width: 100%; // Explicit width
   display: flow-root; // Better than overflow: hidden for float containment
+
+  /* ===== Resume layout ===== */
+  .resume { max-width: 900px; margin: 0 auto; }
+  .resume h2, .resume h3 { margin-top: 2rem; }
+
+  .resume .item { margin: 1rem 0 1.25rem; }
+  .resume .item-header {
+    display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap;
+    border-bottom: 1px solid $streamlit-border-color; padding-bottom: .25rem;
+  }
+  .resume .item-header .left { font-weight: 600; }
+  .resume .item-header .role { font-style: italic; font-weight: 400; margin-left: .5rem; color: $streamlit-subtle-text; }
+  .resume .item-header .date { margin-left: auto; white-space: nowrap; color: $streamlit-subtle-text; }
+  .resume .meta { color: $streamlit-subtle-text; margin-top: .25rem; }
+
+  .resume ul { margin: .5rem 0 0 1.25rem; }
+
+  .resume-download .download-button {
+    display: inline-block; margin-top: 1rem; padding: .6rem 1rem; border-radius: .5rem;
+    background: $streamlit-accent-color; color: #fff; text-decoration: none;
+  }
+  .resume-download .download-button:hover { background: $streamlit-accent-hover; }
+  /* Resume should inherit the site font exactly */
+  .resume, .resume * { font-family: inherit; }
+
+  /* Minor polish */
+  .resume h2 {
+    margin-top: 2rem;
+    padding-bottom: .25rem;
+    border-bottom: 1px solid $streamlit-border-color;
+  }
+  .resume li { margin: .35rem 0; }
+  .resume .item-header .date { white-space: nowrap; color: $streamlit-subtle-text; }
+  .resume .role { font-style: italic; color: $streamlit-subtle-text; }
 
   article {
     h2 {
@@ -400,7 +452,7 @@ p {
 .resume-download {
     text-align: center;
     margin: 2em 0;
-    
+
     .download-button {
         display: inline-block;
         padding: 12px 24px;
@@ -410,7 +462,7 @@ p {
         transition: all 0.2s ease;
         color: $streamlit-content-bg; // White text
         font-weight: 500;
-        
+
         span {
             display: block;
             padding: 8px 16px;
@@ -420,7 +472,7 @@ p {
             font-weight: 500;
             transition: background-color 0.2s ease;
         }
-        
+
         &:hover {
             background-color: darken($streamlit-accent-color, 10%);
             transform: translateY(-5px);

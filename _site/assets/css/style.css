@@ -1,0 +1,94 @@
+/* stylelint-disable-next-line font-family-name-quotes */
+/* @ts-ignore */
+@use "sass:color";
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, figure, blockquote, dl, dd, aside, main, header, footer, nav { margin: 0; padding: 0; box-sizing: border-box; }
+
+body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol"; line-height: 1.6; color: #1F2937; background-color: #F8FAFC; font-size: 16px; display: flex; }
+
+.site-container { display: flex; width: 100%; min-height: 100vh; }
+
+.site-sidebar { width: 280px; background-color: #FFFFFF; border-right: 1px solid #E5E7EB; padding: 20px; display: flex; flex-direction: column; position: fixed; left: 0; top: 0; height: 100vh; overflow-y: auto; }
+.site-sidebar .sidebar-header { margin-bottom: 30px; }
+.site-sidebar .sidebar-header .site-title { font-size: 1.5em; font-weight: bold; color: #0F172A; text-decoration: none; display: block; padding-bottom: 10px; border-bottom: 1px solid #E5E7EB; }
+.site-sidebar .sidebar-header .site-title > img.logo-image { width: 220px; height: auto; display: block; margin: 0 auto; border-radius: 4px; }
+
+.site-nav ul { list-style: none; }
+
+.site-nav li { margin-bottom: 10px; }
+
+.site-nav a { color: #6B7280; text-decoration: none; display: block; padding: 10px 15px; border-radius: 5px; font-weight: 500; transition: background-color 0.2s ease, color 0.2s ease; }
+.site-nav a:hover { background-color: white; color: #0F172A; transform: translateY(-2.5px); box-shadow: 0 2ps 5px rgba(0, 0, 0, 0.1); }
+.site-nav a.active { background-color: #B31B1B; color: #fff; font-weight: bold; }
+
+.main-content-area { flex-grow: 1; padding: 30px 40px; margin-left: 280px; background-color: #F8FAFC; width: calc(100% - 280px); }
+
+.content-wrapper { background-color: #FFFFFF; padding: 25px 30px; border-radius: 8px; box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05); min-height: calc(100vh - 60px - 50px); overflow: hidden; width: 100%; display: flow-root; /* ===== Resume layout ===== */ /* Resume should inherit the site font exactly */ /* Minor polish */ }
+.content-wrapper .resume { max-width: 900px; margin: 0 auto; }
+.content-wrapper .resume h2, .content-wrapper .resume h3 { margin-top: 2rem; }
+.content-wrapper .resume .item { margin: 1rem 0 1.25rem; }
+.content-wrapper .resume .item-header { display: flex; align-items: baseline; gap: 1rem; flex-wrap: wrap; border-bottom: 1px solid #E5E7EB; padding-bottom: .25rem; }
+.content-wrapper .resume .item-header .left { font-weight: 600; }
+.content-wrapper .resume .item-header .role { font-style: italic; font-weight: 400; margin-left: .5rem; color: #6B7280; }
+.content-wrapper .resume .item-header .date { margin-left: auto; white-space: nowrap; color: #6B7280; }
+.content-wrapper .resume .meta { color: #6B7280; margin-top: .25rem; }
+.content-wrapper .resume ul { margin: .5rem 0 0 1.25rem; }
+.content-wrapper .resume-download .download-button { display: inline-block; margin-top: 1rem; padding: .6rem 1rem; border-radius: .5rem; background: #B31B1B; color: #fff; text-decoration: none; }
+.content-wrapper .resume-download .download-button:hover { background: #911515; }
+.content-wrapper .resume, .content-wrapper .resume * { font-family: inherit; }
+.content-wrapper .resume h2 { margin-top: 2rem; padding-bottom: .25rem; border-bottom: 1px solid #E5E7EB; }
+.content-wrapper .resume li { margin: .35rem 0; }
+.content-wrapper .resume .item-header .date { white-space: nowrap; color: #6B7280; }
+.content-wrapper .resume .role { font-style: italic; color: #6B7280; }
+.content-wrapper article h2 { margin-top: 1em; margin-bottom: 0.7em; color: #0F172A; font-size: 1.6em; }
+.content-wrapper article h2:first-of-type { margin-top: 0em; }
+
+.image-wrapper { float: right; width: 300px; margin: -10px 0 20px 40px; }
+
+.profile-image { width: 250px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); object-fit: cover; }
+
+.project-image { width: 450px; height: auto; border-radius: 8px; box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); object-fit: cover; }
+
+.image-wrapper-large { float: right; width: 550px; margin: -10px 0 20px 40px; }
+
+p { display: block; margin-bottom: 1.2em; }
+
+.page-content .page-header h1, .project-detail .page-header h1 { font-size: 2em; margin-bottom: 0.5em; color: #0F172A; padding-bottom: 0.3em; border-bottom: 2px solid #B31B1B; display: inline-block; }
+
+.entry-content h2 { font-size: 1.6em; margin-top: 1.5em; margin-bottom: 0.7em; color: #0F172A; }
+.entry-content h3 { font-size: 1.3em; margin-top: 1em; margin-bottom: 0.5em; color: #0F172A; }
+.entry-content p, .entry-content ul, .entry-content ol { margin-bottom: 1.2em; color: #1F2937; }
+.entry-content ul, .entry-content ol { padding-left: 20px; }
+.entry-content a { color: #B31B1B; text-decoration: none; font-weight: 500; }
+.entry-content a:hover { text-decoration: underline; }
+.entry-content img { max-width: 100%; height: auto; display: block; margin: 1.5em auto; border-radius: 6px; box-shadow: 0 1px 5px rgba(0, 0, 0, 0.1); }
+.entry-content blockquote { border-left: 4px solid #B31B1B; padding: 10px 20px; margin: 1.5em 0; background-color: white; color: #6B7280; font-style: italic; border-radius: 0 4px 4px 0; }
+.entry-content pre, .entry-content code { background-color: #2d2d2d; color: #f0f0f0; border: 1px solid #444; border-radius: 4px; padding: 0.2em 0.4em; font-family: "SFMono-Regular", Consolas, "Liberation Mono", Menlo, Courier, monospace; font-size: 0.9em; }
+.entry-content pre { padding: 1em; overflow-x: auto; }
+.entry-content pre code { border: none; padding: 0; background-color: transparent; }
+
+.project-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); gap: 25px; margin-top: 2em; }
+.project-gallery .project-card { background-color: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden; text-align: left; transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); }
+.project-gallery .project-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); }
+.project-gallery .project-card a { text-decoration: none; color: inherit; display: block; }
+.project-gallery .project-card img { width: 100%; height: 200px; object-fit: cover; display: block; margin: 0; border-bottom: 1px solid #E5E7EB; border-radius: 0; }
+.project-gallery .project-card h3 { font-size: 1.15em; margin: 15px 20px; color: #0F172A; font-weight: 600; }
+
+.project-detail .project-subtitle { color: #6B7280; margin-top: -0.8em; margin-bottom: 1.5em; font-size: 1.1em; }
+.project-detail .project-main-image { max-width: 60%; margin-bottom: 2em; }
+
+.report-gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); gap: 25px; margin-top: 2em; }
+.report-gallery .report-card { background-color: #FFFFFF; border: 1px solid #E5E7EB; border-radius: 8px; overflow: hidden; text-align: center; transition: transform 0.2s, box-shadow 0.2s; box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04); display: flex; flex-direction: column; height: auto; }
+.report-gallery .report-card a { text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%; }
+.report-gallery .report-card .report-icon { width: 95%; height: 400px; object-fit: contain; margin: 1e auto; display: block; transition: filter 0.2s ease; box-shadow: none; }
+.report-gallery .report-card h3 { padding: 15px 20px; margin: 0; font-size: 1.15em; color: #0F172A; font-weight: 600; background-color: #FFFFFF; flex-grow: 1; }
+.report-gallery .report-card:hover { transform: translateY(-5px); box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); }
+
+.site-footer { background-color: transparent; color: #6B7280; padding: 2em 0 1em 0; text-align: center; font-size: 0.9em; margin-top: 3em; border-top: 1px solid #E5E7EB; }
+.site-footer a { color: #B31B1B; font-weight: 500; }
+.site-footer a:hover { text-decoration: underline; }
+
+.resume-download { text-align: center; margin: 2em 0; }
+.resume-download .download-button { display: inline-block; padding: 12px 24px; background-color: #B31B1B; text-decoration: none; border-radius: 8px; transition: all 0.2s ease; color: #FFFFFF; font-weight: 500; }
+.resume-download .download-button span { display: block; padding: 8px 16px; background-color: #FFFFFF; border-radius: 6px; color: #B31B1B; font-weight: 500; transition: background-color 0.2s ease; }
+.resume-download .download-button:hover { background-color: #871414; transform: translateY(-5px); box-shadow: 0 2ps 5px rgba(0, 0, 0, 0.1); }
+.resume-download .download-button:hover span { background-color: #fafafa; }

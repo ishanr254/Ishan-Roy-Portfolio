@@ -5,7 +5,7 @@ permalink: /
 ---
 
 <div class="image-wrapper">
-  <img src="{{ site.baseurl }}/assets/images/Headshot.jpg" alt="Kasper Atkinson" class="profile-image">
+  <img src="{{ site.baseurl }}/assets/images/Headshot.jpg" alt="Ishan Roy" class="profile-image">
 </div>
 
 Hi, my name is Ishan!
@@ -15,4 +15,4 @@ Hi, my name is Ishan!
 <div style="height:40px;"></div>
 
 
-<img src="{{ site.baseurl }}\assets\images\plane_running.JPG" alt="plane-running" class="project-image" style="width:100%;">
+<img src="{{ site.baseurl }}\assets\images\drone_farm.jpeg" alt="plane-running" class="project-image" style="width:100%;">

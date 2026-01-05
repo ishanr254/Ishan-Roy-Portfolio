@@ -1,2 +1,2 @@
-website link: https://ishanr254.github.io/Ishan-Roy-Portfolio/
+website link: https://cornell-mae-ug.github.io/fa25-portfolio-ishanr254/
 

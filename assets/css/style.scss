@@ -234,7 +234,9 @@ p {
   display: block;
   margin-bottom: 1.2em;
 }
-
+/* Page-local full-width image block */
+.image-block-full { display:block; width:100%; margin:1rem 0 2rem; clear:both; }
+.image-block-full > img { display:block; width:100%; max-width:100%; height:auto; margin:0; float:none; }
 
 // Page specific content styling
 .page-content, .project-detail {

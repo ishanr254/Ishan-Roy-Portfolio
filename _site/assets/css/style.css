@@ -52,6 +52,11 @@ body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helve
 
 p { display: block; margin-bottom: 1.2em; }
 
+/* Page-local full-width image block */
+.image-block-full { display: block; width: 100%; margin: 1rem 0 2rem; clear: both; }
+
+.image-block-full > img { display: block; width: 100%; max-width: 100%; height: auto; margin: 0; float: none; }
+
 .page-content .page-header h1, .project-detail .page-header h1 { font-size: 2em; margin-bottom: 0.5em; color: #0F172A; padding-bottom: 0.3em; border-bottom: 2px solid #B31B1B; display: inline-block; }
 
 .entry-content h2 { font-size: 1.6em; margin-top: 1.5em; margin-bottom: 0.7em; color: #0F172A; }

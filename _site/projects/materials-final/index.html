@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Torque Wrench Design & Finite Element Analysis - MAE 3270 Final Project | Ishan Roy - Engineering Portfolio</title>
+    <meta name="description" content="Summary The goal of this project was to design a non-ratcheting torque wrench capable of meeting several design and performance specifications. I used a MATL...">
+    <link rel="stylesheet" href="/fa25-portfolio-ishanr254/assets/css/style.css">
+    
+    <!-- Favicon declarations -->
+    <link rel="shortcut icon" href="/fa25-portfolio-ishanr254/assets/images/Cornell_Logo_favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="/fa25-portfolio-ishanr254/assets/images/Cornell_Logo_favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/fa25-portfolio-ishanr254/assets/images/Cornell_Logo_favicon.png">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/fa25-portfolio-ishanr254/feed.xml" title="Ishan Roy - Engineering Portfolio" />
+</head>
+<!-- MathJax support for LaTeX equations -->
+<script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+<script id="MathJax-script" async
+  src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+</script>
+<body>
+    <div class="site-container">
+        
+        <aside class="site-sidebar">
+            <div class="sidebar-header">
+                <a class="site-title" href="/fa25-portfolio-ishanr254/">
+                    <img src="/fa25-portfolio-ishanr254/assets/images/Cornell_Logo.png" alt="Ishan Roy - Engineering Portfolio" class="logo-image">
+                </a>
+            </div>
+            <nav class="site-nav">
+  <ul>
+    <li><a href="/fa25-portfolio-ishanr254/" >About Me</a></li>
+    <li><a href="/fa25-portfolio-ishanr254/projects/" class="active">Projects</a></li>
+    <li><a href="/fa25-portfolio-ishanr254/reports/" >Reports</a></li>
+    <li><a href="/fa25-portfolio-ishanr254/cv/" >CV</a></li>
+    <li><a href="/fa25-portfolio-ishanr254/coursework/" >Coursework</a></li>
+    <!-- Add more links here if needed -->
+  </ul>
+</nav>
+        </aside>
+
+        <div class="main-content-area">
+            
+            <main class="content-wrapper">
+                <article class="project-detail">
+  <header class="page-header">
+    <h1>Torque Wrench Design & Finite Element Analysis - MAE 3270 Final Project</h1>
+    
+      <p class="project-subtitle"><em></em></p>
+    
+  </header>
+
+  <div class="entry-content">
+    
+      <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/cadRender.jpg" alt="Torque Wrench Design & Finite Element Analysis - MAE 3270 Final Project main image" class="project-main-image">
+    
+
+    <h3 id="summary">Summary</h3>
+<p>The goal of this project was to design a non-ratcheting torque wrench capable of meeting several design and performance specifications. I used a MATLAB script to perform analytical calculations and run through possible designs. I then created a CAD model in SOLIDWORKS and created a Finite Element Model (FEM) using Ansys Static Structural. I conducted analysis and then compared it to the results of the analytical calculations.</p>
+
+<hr />
+
+<h3 id="1-cad-model">1) CAD Model</h3>
+<div class="image-block-full">
+  <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/cad-dimensions.jpg" alt="CAD model with key dimensions" class="project-image" style="width:100%;" />
+</div>
+
+<hr />
+
+<h3 id="2-material--relevant-mechanical-properties">2) Material &amp; Relevant Mechanical Properties</h3>
+<ul>
+  <li>Material: <strong>Ti-6Al-4V (Annealed)</strong></li>
+  <li>E = <strong>119 GPa</strong> <em>(= 17.3 Msi)</em></li>
+  <li>ν = <strong>0.31</strong></li>
+  <li>σᵧ = <strong>910 MPa</strong> <em>(= 132 ksi)</em>,</li>
+  <li>Fracture toughness <strong>K₁C ≈ 107 MPa√m</strong> <em>(= 97.3 ksi√in)</em></li>
+  <li>Fatigue/Endurance limit <strong>≈ 517 MPa</strong> <em>(= 75 ksi)</em></li>
+  <li>Source: <strong>Ansys Granta</strong></li>
+</ul>
+
+<p>Ti-6Al-4V (annealed) was selected for its high specific strength and corrosion resistance. With E = 119 GPa and ν = 0.31, it provides sufficient stiffness and produces measurable surface strain without approaching the allowable σy = 910 MPa under the applied loads. Some trade-offs, including the higher cost and lower modulus than steel, are acceptable given the goal of this project was to maximize the sensitivity of the design.</p>
+
+<hr />
+
+<h3 id="3-finite-element-model-setup-loads-and-boundary-conditions">3) Finite Element Model Setup (Loads and Boundary Conditions)</h3>
+<div class="image-block-full">
+  <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/fem-setup.png" alt="Loads and boundary conditions" class="project-image" style="width:100%;" />
+</div>
+<ul>
+  <li>Constraints: four faces of the block above the drive were constrained to have zero displacement</li>
+  <li>Load: A load of 600 lbf * in was applied at the end of the wrench handle</li>
+</ul>
+
+<hr />
+
+<h3 id="4-normal-strain-contours">4) Normal Strain Contours</h3>
+<div class="image-block-full">
+  <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/strain-sgdir.png" alt="Normal strain contours in gauge direction" class="project-image" style="width:100%;" />
+</div>
+
+<hr />
+
+<h3 id="5-maximum-principal-stress-contour">5) Maximum Principal Stress Contour</h3>
+<div class="image-block-full">
+  <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/stress-maxP.png" alt="Maximum principal stress contour" class="project-image" style="width:100%;" />
+</div>
+
+<hr />
+
+<h3 id="7-max-normal-stress">7) Max Normal Stress</h3>
+<ul>
+  <li><strong>Value:</strong> <strong>1.457 x 10^5 psi</strong></li>
+</ul>
+
+<div class="image-block-full">
+  <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/stress-max.png" alt="Max normal stress contour from FEM" />
+</div>
+
+<hr />
+
+<h3 id="8-deflection-at-load-point">8) Deflection at Load Point</h3>
+<ul>
+  <li><strong>Value: 0.8275 in</strong></li>
+</ul>
+
+<div class="image-block-full">
+  <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/deflection-loadpoint.png" alt="Deflection field and load-point displacement" />
+</div>
+
+<hr />
+
+<h3 id="9-strain-at-gauge">9) Strain at Gauge</h3>
+<ul>
+  <li><strong>Value:</strong> <strong>1599.3 µε</strong> at the set gauge location</li>
+</ul>
+
+<div style="display:flex; gap:1rem; clear:both; width:100%; margin:1rem 0 2rem;">
+  <!-- Main image (~2/3 width) -->
+  <div style="flex:2 1 0; min-width:0;">
+    <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/strainGauge.png" alt="Strain at gauge location (field view)" style="display:block; width:100%; height:auto;" />
+  </div>
+
+  <!-- Secondary image (~1/3 width, a bit larger) -->
+  <div style="flex:1 1 0; min-width:260px;">
+    <img src="/fa25-portfolio-ishanr254/assets/images/materials-final/strainGaugeZoom.png" alt="Strain gauge zoom / vertical detail" style="display:block; width:100%; height:auto;" />
+  </div>
+</div>
+
+<hr />
+
+<h3 id="10-torque-wrench-sensitivity">10) Torque-Wrench Sensitivity</h3>
+<ul>
+  <li>Measured strain from the strain gauge in the model <strong>ε = 1599.3 µε</strong></li>
+  <li>Gauge factor: <strong>K = 2</strong></li>
+  <li>Bridge setup used:  <strong>half</strong></li>
+  <li><strong>Sensitivity: 1.5993 mV/V</strong> - meets the required criteria</li>
+</ul>
+
+<hr />
+
+<h3 id="11-strain-gauge-selection">11) Strain Gauge Selection</h3>
+<ul>
+  <li>Gauge Type: <strong>Bonded Foil Strain Gauge</strong></li>
+  <li>Dimensions: <strong>~ 7mm x 4mm</strong></li>
+  <li>Bonding area on the part is larger than this, providing enough room</li>
+</ul>
+
+
+    
+    
+  </div>
+</article>
+            </main>
+            <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2025 Ishan Roy. All rights reserved.</p>
+  </div>
+</footer>
+
+        </div>
+    </div>
+</body>
+</html>

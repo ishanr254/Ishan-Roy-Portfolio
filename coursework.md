@@ -4,8 +4,10 @@ title: Coursework
 permalink: /coursework/
 ---
 
-## Coming Up...
+## Junior Year
 
+
+**Fall 2025**
 - **MAE 3230:** Introductory Fluid Mechanics
 - **MAE 3270:** Mechanics of Engineering Materials
 - **MAE 3260:** System Dynamics

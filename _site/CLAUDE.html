@@ -1,0 +1,337 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ishan Roy Portfolio — Claude Code Context | Ishan Roy - Engineering Portfolio</title>
+    <meta name="description" content="A brief description of your portfolio and your skills.">
+    <link rel="stylesheet" href="/Ishan-Roy-Portfolio/assets/css/style.css">
+    
+    <!-- Favicon declarations -->
+    <link rel="shortcut icon" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/Ishan-Roy-Portfolio/feed.xml" title="Ishan Roy - Engineering Portfolio" />
+    <!-- MathJax support for LaTeX equations -->
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="site-container">
+        
+        <aside class="site-sidebar">
+            <div class="sidebar-header">
+                <a class="site-title" href="/Ishan-Roy-Portfolio/">
+                    <img src="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo.png" alt="Ishan Roy - Engineering Portfolio" class="logo-image">
+                </a>
+            </div>
+            <nav class="site-nav">
+  <ul>
+    <li><a href="/Ishan-Roy-Portfolio/" >About Me</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/projects/" >Projects</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/reports/" >Reports</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/cv/" >CV</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/coursework/" >Coursework</a></li>
+    <!-- Add more links here if needed -->
+  </ul>
+</nav>
+        </aside>
+
+        <div class="main-content-area">
+            
+            <main class="content-wrapper">
+                <article class="page-content">
+  <header class="page-header">
+    <h1>Ishan Roy Portfolio — Claude Code Context</h1>
+  </header>
+  <div class="entry-content">
+    <h1 id="ishan-roy-portfolio--claude-code-context">Ishan Roy Portfolio — Claude Code Context</h1>
+
+<h2 id="site-overview">Site Overview</h2>
+<p>Jekyll static site portfolio for Ishan Roy, a Cornell MAE student.</p>
+<ul>
+  <li><strong>Live URL:</strong> https://cornell-mae-ug.github.io/fa25-portfolio-ishanr254/</li>
+  <li><strong>Repo baseurl:</strong> <code class="language-plaintext highlighter-rouge">/Ishan-Roy-Portfolio</code> (used in all asset paths)</li>
+  <li><strong>Host:</strong> GitHub Pages (via <code class="language-plaintext highlighter-rouge">github-pages</code> gem, Jekyll 3.10.0)</li>
+  <li><strong>Markdown:</strong> kramdown with GFM input</li>
+</ul>
+
+<hr />
+
+<h2 id="directory-structure">Directory Structure</h2>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>.
+├── CLAUDE.md                    # This file
+├── _config.yml                  # Site config, collections, plugins
+├── Gemfile / Gemfile.lock       # Ruby dependencies
+│
+├── _layouts/
+│   ├── default.html             # Base layout: sidebar + main content area
+│   ├── page.html                # Standard content page
+│   ├── project.html             # Individual project page
+│   └── report.html              # Individual report page (renders PDF/slides iframe)
+│
+├── _includes/
+│   ├── navigation.html          # Sidebar nav with active-state logic
+│   ├── header.html              # (legacy, not used in default.html)
+│   └── footer.html              # Footer with copyright
+│
+├── _sass/
+│   └── custom.scss              # ALL custom styles — single source of truth
+│
+├── _projects/                   # Collection: one .md per project
+├── _reports/                    # Collection: one .md per report
+│
+├── assets/
+│   ├── images/                  # Photos, renders, headshots
+│   ├── icons/                   # Small icons used in report/project cards
+│   ├── files/                   # PDFs and downloadable files
+│   └── css/style.css            # Compiled output (do not edit directly)
+│
+├── aboutme.md                   # Homepage (permalink: /)
+├── projects.md                  # Projects gallery page (permalink: /projects/)
+├── reports.md                   # Reports gallery page (permalink: /reports/)
+├── cv.md                        # CV/Resume page (permalink: /cv/)
+├── coursework.md                # Coursework listing (permalink: /coursework/)
+└── index.md                     # Redirects to aboutme; permalink: /welcome/
+</code></pre></div></div>
+
+<hr />
+
+<h2 id="collections">Collections</h2>
+
+<h3 id="projects-_projects">Projects (<code class="language-plaintext highlighter-rouge">_projects/</code>)</h3>
+<p>Each file generates a page at <code class="language-plaintext highlighter-rouge">/projects/:name/</code>.</p>
+
+<p><strong>Required front matter:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">project</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Project</span><span class="nv"> </span><span class="s">Title"</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">YYYY-MM-DD</span>        <span class="c1"># Used for sort order on projects.md gallery (newest first)</span>
+<span class="na">image</span><span class="pi">:</span> <span class="s">assets/images/filename.jpg</span>  <span class="c1"># Thumbnail shown on gallery + top of project page</span>
+<span class="na">tags</span><span class="pi">:</span> <span class="pi">[</span><span class="nv">tag1</span><span class="pi">,</span> <span class="nv">tag2</span><span class="pi">]</span>      <span class="c1"># Optional</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+
+<p><strong>Optional front matter:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">subtitle</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Short</span><span class="nv"> </span><span class="s">subtitle</span><span class="nv"> </span><span class="s">shown</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">title"</span>
+<span class="na">project_link</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://..."</span>   <span class="c1"># Renders a "View Project/Demo" link</span>
+<span class="na">repo_link</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://..."</span>      <span class="c1"># Renders a "View Code Repository" link</span>
+</code></pre></div></div>
+
+<p><strong>Content notes:</strong></p>
+<ul>
+  <li>Write in Markdown; HTML blocks are fine for complex layouts</li>
+  <li>Images: use <code class="language-plaintext highlighter-rouge">/Ishan-Roy-Portfolio/assets/images/filename.jpg</code> for src</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">.inline-image</code>, <code class="language-plaintext highlighter-rouge">.inline-image-l</code>, <code class="language-plaintext highlighter-rouge">.inline-image-r</code> classes for floated inline images (max-width 350px)</li>
+  <li>Use <code class="language-plaintext highlighter-rouge">style="width:100%"</code> on images inside <code class="language-plaintext highlighter-rouge">.image-block-full</code> divs for full-width figures</li>
+  <li>Embedded PDFs: use <code class="language-plaintext highlighter-rouge">&lt;object&gt;</code> tag with <code class="language-plaintext highlighter-rouge">data="/Ishan-Roy-Portfolio/assets/files/file.pdf#view=FitH"</code></li>
+  <li>Embedded YouTube: use the responsive iframe wrapper pattern (padding-bottom: 56.25%)</li>
+</ul>
+
+<h3 id="reports-_reports">Reports (<code class="language-plaintext highlighter-rouge">_reports/</code>)</h3>
+<p>Each file generates a page at <code class="language-plaintext highlighter-rouge">/reports/:name/</code>.</p>
+
+<p><strong>Required front matter:</strong></p>
+<div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nn">---</span>
+<span class="na">layout</span><span class="pi">:</span> <span class="s">report</span>
+<span class="na">title</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Report</span><span class="nv"> </span><span class="s">Title"</span>
+<span class="na">date</span><span class="pi">:</span> <span class="s">YYYY-MM-DD</span>        <span class="c1"># Used for sort order on reports.md gallery (newest first)</span>
+<span class="na">icon</span><span class="pi">:</span> <span class="s">/assets/icons/filename.png</span>   <span class="c1"># Card thumbnail on reports gallery</span>
+<span class="na">file</span><span class="pi">:</span> <span class="s">/assets/files/filename.pdf</span>   <span class="c1"># File to embed</span>
+<span class="na">type</span><span class="pi">:</span> <span class="s">pdf</span>                          <span class="c1"># "pdf" or "slides"</span>
+<span class="nn">---</span>
+</code></pre></div></div>
+<p>The <code class="language-plaintext highlighter-rouge">report.html</code> layout auto-embeds the file in an iframe (800px tall). No body content needed unless you want intro text above the embed.</p>
+
+<hr />
+
+<h2 id="navigation">Navigation</h2>
+<p>Defined in <code class="language-plaintext highlighter-rouge">_includes/navigation.html</code>. Current pages in order:</p>
+<ol>
+  <li>About Me → <code class="language-plaintext highlighter-rouge">/</code></li>
+  <li>Projects → <code class="language-plaintext highlighter-rouge">/projects/</code></li>
+  <li>Reports → <code class="language-plaintext highlighter-rouge">/reports/</code></li>
+  <li>CV → <code class="language-plaintext highlighter-rouge">/cv/</code></li>
+  <li>Coursework → <code class="language-plaintext highlighter-rouge">/coursework/</code></li>
+</ol>
+
+<p>To add a new top-level page, add a <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> entry here with appropriate active-state logic.</p>
+
+<hr />
+
+<h2 id="styling-_sasscustomscss">Styling (<code class="language-plaintext highlighter-rouge">_sass/custom.scss</code>)</h2>
+
+<h3 id="theme--color-scheme">Theme / Color Scheme</h3>
+<p>Supports <code class="language-plaintext highlighter-rouge">light</code> (default), <code class="language-plaintext highlighter-rouge">dark</code>, <code class="language-plaintext highlighter-rouge">aqua</code>, and <code class="language-plaintext highlighter-rouge">desert</code> via <code class="language-plaintext highlighter-rouge">$color_scheme</code> variable.</p>
+
+<p>Default (light) palette:</p>
+<ul>
+  <li><code class="language-plaintext highlighter-rouge">$primary-color: #3a3f58</code> — header, footer, sidebar background</li>
+  <li><code class="language-plaintext highlighter-rouge">$background-color: #f7f8fa</code> — page background</li>
+  <li><code class="language-plaintext highlighter-rouge">$text-color: #333</code></li>
+</ul>
+
+<h3 id="key-css-classes">Key CSS Classes</h3>
+
+<table>
+  <thead>
+    <tr>
+      <th>Class</th>
+      <th>Use</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.profile-image</code></td>
+      <td>Float-left portrait image, 150px wide, rounded + shadow</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.project-image</code></td>
+      <td>Float-left image, max 200px wide</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.inline-image</code></td>
+      <td>Centered inline image, max 350px</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.inline-image-l</code></td>
+      <td>Float-left variant of <code class="language-plaintext highlighter-rouge">.inline-image</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.inline-image-r</code></td>
+      <td>Float-right variant of <code class="language-plaintext highlighter-rouge">.inline-image</code></td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.image-block-full</code></td>
+      <td>Full-width figure block</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.project-gallery</code></td>
+      <td>CSS grid for project/report cards (auto-fit, minmax 150px)</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.gallery-item</code></td>
+      <td>Individual card in a gallery grid</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.back-arrow</code></td>
+      <td>Styled back-navigation link</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.resume-download</code></td>
+      <td>Container for download button</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.download-button</code></td>
+      <td>Styled download/CTA button</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.report-gallery</code></td>
+      <td>Gallery grid for reports page</td>
+    </tr>
+    <tr>
+      <td><code class="language-plaintext highlighter-rouge">.report-card</code></td>
+      <td>Individual report card</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="typography">Typography</h3>
+<ul>
+  <li>Headings: <code class="language-plaintext highlighter-rouge">Merriweather</code> serif, weight 700</li>
+  <li>Body: <code class="language-plaintext highlighter-rouge">Open Sans</code> / <code class="language-plaintext highlighter-rouge">Montserrat</code> / <code class="language-plaintext highlighter-rouge">Helvetica Neue</code>, line-height 1.6</li>
+</ul>
+
+<hr />
+
+<h2 id="asset-path-rules">Asset Path Rules</h2>
+<ul>
+  <li><strong>Always</strong> use <code class="language-plaintext highlighter-rouge">/Ishan-Roy-Portfolio/assets/...</code> or <code class="language-plaintext highlighter-rouge">/Ishan-Roy-Portfolio/assets/...</code> — never bare <code class="language-plaintext highlighter-rouge">/assets/...</code> paths, as the baseurl prefix is required for GitHub Pages</li>
+  <li>Files in <code class="language-plaintext highlighter-rouge">assets/files/</code> and <code class="language-plaintext highlighter-rouge">assets/covers/</code> are explicitly included in <code class="language-plaintext highlighter-rouge">_config.yml</code></li>
+</ul>
+
+<hr />
+
+<h2 id="cv--resume-notes">CV / Resume Notes</h2>
+<ul>
+  <li>CV page is written directly in <code class="language-plaintext highlighter-rouge">cv.md</code> as HTML+Markdown hybrid</li>
+  <li>Uses <code class="language-plaintext highlighter-rouge">.item</code>, <code class="language-plaintext highlighter-rouge">.item-header</code>, <code class="language-plaintext highlighter-rouge">.left</code>, <code class="language-plaintext highlighter-rouge">.date</code>, <code class="language-plaintext highlighter-rouge">.role</code> CSS classes for layout</li>
+  <li>Downloadable PDF at <code class="language-plaintext highlighter-rouge">assets/files/Ishan_Roy.pdf</code></li>
+  <li>Transcript PDF at <code class="language-plaintext highlighter-rouge">assets/files/Roy_Ishan_Transcript Fall 2025.pdf</code></li>
+</ul>
+
+<hr />
+
+<h2 id="owner--personal-context">Owner / Personal Context</h2>
+<ul>
+  <li><strong>Name:</strong> Ishan Roy</li>
+  <li><strong>School:</strong> Cornell University, Sibley School of Mechanical and Aerospace Engineering</li>
+  <li><strong>Degree:</strong> BS Mechanical Engineering, Minor Aerospace Engineering, Expected May 2027</li>
+  <li><strong>Email:</strong> irr4@cornell.edu</li>
+  <li><strong>Key projects:</strong> Magnus Effect Ultralight drone (Team Lead), CU Design Build Fly (Full Team Co-Lead), MATLAB DBF design optimization</li>
+  <li><strong>Skills:</strong> SOLIDWORKS, ANSYS, MATLAB, Python, composite fabrication, 3D printing</li>
+</ul>
+
+<hr />
+
+<h2 id="common-tasks--patterns">Common Tasks &amp; Patterns</h2>
+
+<h3 id="add-a-new-project">Add a new project</h3>
+<ol>
+  <li>Create <code class="language-plaintext highlighter-rouge">_projects/your-project-name.md</code> with required front matter</li>
+  <li>Add image to <code class="language-plaintext highlighter-rouge">assets/images/</code></li>
+  <li>Write content in Markdown below the <code class="language-plaintext highlighter-rouge">---</code></li>
+</ol>
+
+<h3 id="add-a-new-report">Add a new report</h3>
+<ol>
+  <li>Add PDF to <code class="language-plaintext highlighter-rouge">assets/files/</code></li>
+  <li>Add icon image to <code class="language-plaintext highlighter-rouge">assets/icons/</code></li>
+  <li>Create <code class="language-plaintext highlighter-rouge">_reports/your-report-name.md</code> with required front matter</li>
+</ol>
+
+<h3 id="add-a-new-nav-page">Add a new nav page</h3>
+<ol>
+  <li>Create <code class="language-plaintext highlighter-rouge">yourpage.md</code> with <code class="language-plaintext highlighter-rouge">layout: page</code> and a <code class="language-plaintext highlighter-rouge">permalink:</code></li>
+  <li>Add <code class="language-plaintext highlighter-rouge">&lt;li&gt;</code> to <code class="language-plaintext highlighter-rouge">_includes/navigation.html</code></li>
+</ol>
+
+<h3 id="responsive-iframes-youtube">Responsive iframes (YouTube)</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"position:relative;padding-bottom:56.25%;height:0;overflow:hidden;margin:1rem 0 2rem;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;iframe</span> <span class="na">src=</span><span class="s">"https://www.youtube.com/embed/VIDEO_ID"</span>
+    <span class="na">title=</span><span class="s">"YouTube video"</span> <span class="na">loading=</span><span class="s">"lazy"</span>
+    <span class="na">allow=</span><span class="s">"accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"</span>
+    <span class="na">allowfullscreen</span>
+    <span class="na">style=</span><span class="s">"position:absolute;top:0;left:0;width:100%;height:100%;border:0;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;/iframe&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="embedded-pdf-in-project-pages">Embedded PDF (in project pages)</h3>
+<div class="language-html highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="nt">&lt;div</span> <span class="na">style=</span><span class="s">"width:100%; margin:1rem 0 2rem; clear:both;"</span><span class="nt">&gt;</span>
+  <span class="nt">&lt;object</span> <span class="na">data=</span><span class="s">"/Ishan-Roy-Portfolio/assets/files/FILENAME.pdf#view=FitH"</span>
+          <span class="na">type=</span><span class="s">"application/pdf"</span> <span class="na">width=</span><span class="s">"100%"</span> <span class="na">height=</span><span class="s">"390vh"</span><span class="nt">&gt;</span>
+    <span class="nt">&lt;p&gt;</span>PDF preview not supported. <span class="nt">&lt;a</span> <span class="na">href=</span><span class="s">"/Ishan-Roy-Portfolio/assets/files/FILENAME.pdf"</span> <span class="na">target=</span><span class="s">"_blank"</span><span class="nt">&gt;</span>Open PDF<span class="nt">&lt;/a&gt;&lt;/p&gt;</span>
+  <span class="nt">&lt;/object&gt;</span>
+<span class="nt">&lt;/div&gt;</span>
+</code></pre></div></div>
+
+<h3 id="project-timeline-block">Project timeline block</h3>
+<p>Use the inline-styled <code class="language-plaintext highlighter-rouge">.timeline</code> div pattern (see <code class="language-plaintext highlighter-rouge">_projects/magnus_drone.md</code> for full example). Each <code class="language-plaintext highlighter-rouge">.tl-item</code> has a red dot (<code class="language-plaintext highlighter-rouge">#b31b1b</code>), a <code class="language-plaintext highlighter-rouge">.tl-time</code> label, and <code class="language-plaintext highlighter-rouge">.tl-content</code> with an <code class="language-plaintext highlighter-rouge">&lt;h4&gt;</code> and <code class="language-plaintext highlighter-rouge">&lt;p&gt;</code>.</p>
+
+  </div>
+</article>
+            </main>
+            <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Ishan Roy. All rights reserved.</p>
+  </div>
+</footer>
+
+        </div>
+    </div>
+</body>
+</html>

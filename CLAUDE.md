@@ -71,6 +71,7 @@ tags: [tag1, tag2]      # Optional
 subtitle: "Short subtitle shown under title"
 project_link: "https://..."   # Renders a "View Project/Demo" link
 repo_link: "https://..."      # Renders a "View Code Repository" link
+hide_hero: true                # Keeps `image` for the /projects/ gallery thumbnail, but suppresses the hero image at the top of this page's own detail view
 ```
 
 **Content notes:**
@@ -175,6 +176,19 @@ Default (light) palette:
 1. Create `_projects/your-project-name.md` with required front matter
 2. Add image to `assets/images/`
 3. Write content in Markdown below the `---`
+
+### Hub-and-spoke projects (subpages)
+For a project big enough to need multiple linked pages (e.g. a leadership writeup + a technical writeup for the same team/project), use this pattern rather than inventing a new one:
+1. Keep one "hub" page as the normal `_projects/` entry (e.g. `dbf_lead.md`) — this is what shows up in the main Projects gallery.
+2. Create additional pages in `_projects/` for each subpage (e.g. `dbf_leadership.md`, `dbf_technical.md`), each with `layout: project` like normal, but add `hidden: true` to the front matter.
+3. `projects.md`'s gallery loop skips any project where `project.hidden` is true, so subpages don't show up as their own gallery cards — they're only reachable via links from the hub page.
+4. **Underscore-to-hyphen gotcha:** Jekyll's `:name` permalink placeholder slugifies the filename, converting underscores to hyphens. A file named `dbf_leadership.md` is served at `/projects/dbf-leadership/`, NOT `/projects/dbf_leadership/`. When linking to any collection page (hub or subpage), always use hyphens in the URL regardless of how the source filename is written. Easiest fix: name new files with hyphens from the start (`dbf-leadership.md`) to avoid the mismatch entirely.
+5. On the hub page, link out to subpages with `{{ site.baseurl }}/projects/<subpage-slug-with-hyphens>/`.
+6. On each subpage, add a back-link at the top using the existing `.back-arrow` class: `<a href="{{ site.baseurl }}/projects/<hub-slug-with-hyphens>/" class="back-arrow">← Back to [Project] Overview</a>`.
+
+Example in use: `dbf_lead.md` (hub, served at `/projects/dbf-lead/`) → `dbf_leadership.md` + `dbf_technical.md` (hidden subpages, served at `/projects/dbf-leadership/` and `/projects/dbf-technical/`).
+
+This pattern nests arbitrarily deep — a subpage can itself be a mini-hub. Example: `dbf_technical.md` is itself a list of links (no long-form content of its own) pointing to five further `hidden: true` pages (`dbf-technical-aircraft.md`, `dbf-technical-mdo.md`, `dbf-technical-fuselage.md`, `dbf-technical-banner.md`, `dbf-technical-landing-gear.md`), each with its own back-arrow pointing up to `/projects/dbf-technical/` (not all the way back to the top-level hub). When nesting, name new files with hyphens from the start to avoid the underscore/slug mismatch above.
 
 ### Add a new report
 1. Add PDF to `assets/files/`

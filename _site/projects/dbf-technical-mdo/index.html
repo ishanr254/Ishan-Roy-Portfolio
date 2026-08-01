@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MATLAB Design Optimization Program | Ishan Roy - Engineering Portfolio</title>
+    <meta name="description" content="← Back to Technical Projects">
+    <link rel="stylesheet" href="/Ishan-Roy-Portfolio/assets/css/style.css">
+    
+    <!-- Favicon declarations -->
+    <link rel="shortcut icon" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/Ishan-Roy-Portfolio/feed.xml" title="Ishan Roy - Engineering Portfolio" />
+    <!-- MathJax support for LaTeX equations -->
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="site-container">
+        
+        <aside class="site-sidebar">
+            <div class="sidebar-header">
+                <a class="site-title" href="/Ishan-Roy-Portfolio/">
+                    <img src="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo.png" alt="Ishan Roy - Engineering Portfolio" class="logo-image">
+                </a>
+            </div>
+            <nav class="site-nav">
+  <ul>
+    <li><a href="/Ishan-Roy-Portfolio/" >About Me</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/projects/" class="active">Projects</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/reports/" >Reports</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/cv/" >CV</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/coursework/" >Coursework</a></li>
+    <!-- Add more links here if needed -->
+  </ul>
+</nav>
+        </aside>
+
+        <div class="main-content-area">
+            
+            <main class="content-wrapper">
+                <article class="project-detail">
+  <header class="page-header">
+    <h1>MATLAB Design Optimization Program</h1>
+    
+      <p class="project-subtitle"><em>Multidisciplinary Design Optimization · AIAA DBF 2025–2026</em></p>
+    
+  </header>
+
+  <div class="entry-content">
+    
+      <img src="/Ishan-Roy-Portfolio/assets/images/dbf/mdo_code_diagram.jpg" alt="MATLAB Design Optimization Program main image" class="project-main-image">
+    
+
+    <p><a href="/Ishan-Roy-Portfolio/projects/dbf-technical/" class="back-arrow">← Back to Technical Projects</a></p>
+
+<p>The core design tool underlying DF1 is a MATLAB-based high-fidelity multidisciplinary design optimization (MDO) framework that simulates the competition mission profiles and finds an optimal aircraft geometry. The program was developed the summer before the 2025-26 competition cycle by myself and my co-lead with assistance from previous leads. The framework is implemented in MATLAB and organized into modular subsystems that exchange data and perform verification tasks. A 31-variable design vector, defining aircraft geometry and configuration, is passed through each analysis module and ultimately evaluated by a genetic algorithm to identify high-performing designs. The module structure and data flow are shown in the figure above.</p>
+
+<p>The aerodynamic module models aerodynamic properties of the aircraft’s wings, empennage, and fuselage, combining geometric parameters with propulsion performance and mass properties to compute lift, drag, and aerodynamic moments across the operating envelope, and verifies static and dynamic stability by enforcing stall margin, thrust, and control constraints. The mechanical module estimates mass given dimensions and configuration using empirical models, calculates the aircraft’s CG via a weighted average of individual components, and computes the moment of inertia tensor using the parallel axis theorem.</p>
+
+<p>The propulsion module calculates thrust and power given incoming airspeed and throttle, identifies the characteristic thrust-velocity relationship, and evaluates aircraft flight time and battery endurance. The scoring module simulates performance across all three flight missions, calculates TMS, and applies penalty functions to account for relative performance in negotiable categories, including dynamic flight behavior and usable flight envelope.</p>
+
+<p>Over 150,000 candidate designs were evaluated during the optimization run. Two primary design trends toward a high TMS emerged: one favoring M2 with a low-capacity battery and greater payload, and one prioritizing GM and M3 with a larger battery and longer banner. The genetic algorithm optimization results are presented as a parallel coordinates plot in the figure below, where each line represents a candidate design and line color denotes TMS. The sizing program ultimately identified an optimal configuration with 3 passengers, 1 cargo, and a 150.00 in banner, with these mission parameters driving the preliminary aircraft design.</p>
+
+<div class="image-block-full">
+  <img src="/Ishan-Roy-Portfolio/assets/images/dbf/parallel-coords-2.png" alt="Parallel coordinates plot of design parameter scoring study showing 150,000 evaluated designs" class="project-image" style="width:90%; display:block; margin:0 auto;" />
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">Design parameter scoring study</p>
+</div>
+
+<p>I developed and maintained the mechanical module, which estimates structural mass and computes the mass distribution properties used for CG calculation and moment of inertia verification. I additionally implemented the optimization module and adapted the scoring model to the 2025-26 rules upon their release, refining both as the team’s performance data and build capabilities became available throughout the season.</p>
+
+<p><strong>Key outcomes:</strong></p>
+<ul>
+  <li>Over 150,000 designs evaluated across the optimization run</li>
+  <li>MDO output directly determined final aircraft configuration submitted to competition</li>
+  <li>Competition results and other teams’ designs proved the MDO directed us to a successful design concept</li>
+</ul>
+
+<hr />
+
+<h3 id="verifying-the-optimizer-example-wingspan-and-taper">Verifying the Optimizer Example: Wingspan and Taper</h3>
+
+<p>With the overall configuration fixed, the MDO was used to optimize the five most sensitive design parameters identified by the scoring sensitivity analysis: wingspan, GM time, passenger count, banner length, and battery capacity. Wingspan required the most deliberate judgment because it directly drives two competing outcomes. At a fixed wing area and lift coefficient, induced drag is proportional to the inverse of wingspan; a longer span reduces drag and increases M3 lap performance. However, wingspan also linearly increases RAC, which enters the M3 scoring equation directly and penalizes the team relative to competitors. The MDO converged to an optimal wingspan of 46.51 in and wing area of 562.31 in², balancing these competing effects within the full scoring model.</p>
+
+<p>To verify that additional geometric complexity was not warranted, the effect of wing taper on aerodynamic efficiency was investigated independently in XFLR5 for taper ratios from 0.5 to 1 at a fixed planform area. The maximum improvement in CL/CD was 1.96% in M3. This did not justify the added manufacturing complexity, and a rectangular planform was retained. The same reasoning was applied to the empennage, where no taper was implemented in either stabilizer.</p>
+
+<p>This example shows the broader pattern behind the tool: the MDO explored the design space rigorously, but each output was verified with independent analysis before being accepted, and complexity was only added where the performance gain was clearly justified.</p>
+
+<hr />
+
+<h3 id="future-plans">Future Plans</h3>
+<p>During the summer of 2026, the team and I are further developing the program as we prepare for the 2026-27 competition cycle. A key change we are making is switching the program over to Python. This will allow us to explore a larger design space, as Python runs quicker, and utilize more advanced aero simulation modules that exist only for Python.</p>
+
+
+    
+    
+  </div>
+</article>
+            </main>
+            <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Ishan Roy. All rights reserved.</p>
+  </div>
+</footer>
+
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aircraft Design & Configuration Selection | Ishan Roy - Engineering Portfolio</title>
+    <meta name="description" content="← Back to Technical Projects">
+    <link rel="stylesheet" href="/Ishan-Roy-Portfolio/assets/css/style.css">
+    
+    <!-- Favicon declarations -->
+    <link rel="shortcut icon" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/Ishan-Roy-Portfolio/feed.xml" title="Ishan Roy - Engineering Portfolio" />
+    <!-- MathJax support for LaTeX equations -->
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="site-container">
+        
+        <aside class="site-sidebar">
+            <div class="sidebar-header">
+                <a class="site-title" href="/Ishan-Roy-Portfolio/">
+                    <img src="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo.png" alt="Ishan Roy - Engineering Portfolio" class="logo-image">
+                </a>
+            </div>
+            <nav class="site-nav">
+  <ul>
+    <li><a href="/Ishan-Roy-Portfolio/" >About Me</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/projects/" class="active">Projects</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/reports/" >Reports</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/cv/" >CV</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/coursework/" >Coursework</a></li>
+    <!-- Add more links here if needed -->
+  </ul>
+</nav>
+        </aside>
+
+        <div class="main-content-area">
+            
+            <main class="content-wrapper">
+                <article class="project-detail">
+  <header class="page-header">
+    <h1>Aircraft Design & Configuration Selection</h1>
+    
+      <p class="project-subtitle"><em>Duck Force One (DF1) · AIAA DBF 2025–2026</em></p>
+    
+  </header>
+
+  <div class="entry-content">
+    
+      <img src="/Ishan-Roy-Portfolio/assets/images/dbf/df1Cad.png" alt="Aircraft Design & Configuration Selection main image" class="project-main-image">
+    
+
+    <p><a href="/Ishan-Roy-Portfolio/projects/dbf-technical/" class="back-arrow">← Back to Technical Projects</a></p>
+
+<p>As Full Team Lead, I dictated the design direction of Duck Force One (DF1), our aircraft for the 2025-26 competition. While our sizing and scoring script produced the mission configuration and key geometric quantities, it was up to us to turn those numbers and ideas into a functional and well performing aircraft.</p>
+
+<p>DF1 implements a high-wing, single-motor configuration with a conventional empennage. The aircraft is capable of carrying passengers and cargo in its fuselage, with a banner mounted on the tail boom.</p>
+
+<h4 id="key-specifications">Key Specifications</h4>
+
+<table>
+  <tbody>
+    <tr>
+      <td>Wingspan</td>
+      <td>46.51 in (3.88 ft)</td>
+    </tr>
+    <tr>
+      <td>Wing chord</td>
+      <td>12.09 in</td>
+    </tr>
+    <tr>
+      <td>Aspect ratio</td>
+      <td>3.85</td>
+    </tr>
+    <tr>
+      <td>Empty weight</td>
+      <td>5.05 lb</td>
+    </tr>
+    <tr>
+      <td>MTOW (M2, heaviest)</td>
+      <td>7.23 lb</td>
+    </tr>
+    <tr>
+      <td>Wing loading</td>
+      <td>29.6 oz/ft²</td>
+    </tr>
+    <tr>
+      <td>Propulsion</td>
+      <td>Scorpion SII-4025-520KV · 15×6 in prop (M1/M3) · 14×7 in prop (M3)</td>
+    </tr>
+    <tr>
+      <td>Battery</td>
+      <td>Tattu 4200 mAh 6S 35C LiPo (M1/M3) · Liperior 4000 mAh 6S 30C LiPo (M2)</td>
+    </tr>
+    <tr>
+      <td>Airfoil</td>
+      <td>FX 60-126 (wing) · NACA 0012 (empennage surfaces)</td>
+    </tr>
+    <tr>
+      <td>Structure</td>
+      <td>CFRP monocoque fuselage · basswood spars · MonoKote covering</td>
+    </tr>
+    <tr>
+      <td>Rated Aircraft Cost</td>
+      <td>0.94</td>
+    </tr>
+  </tbody>
+</table>
+
+<hr />
+
+<h3 id="design-philosophy--configuration-selection">Design Philosophy &amp; Configuration Selection</h3>
+
+<p>The conceptual design phase required selecting an overall aircraft configuration before entering preliminary design. Five structural configurations were evaluated, flying wing, lifting body, biplane, twin-boom, and single-boom, and assessed against weighted FoMs including mission performance, integration quality, aerodynamics, stability, and manufacturability. The flying wing and lifting body offered reduced drag but provided limited internal volume, reduced inherent stability, and poor control authority. The biplane offered improved low-speed lift but incurred increased drag, mass, and integration complexity. The twin-boom improved rotational stability, which would have been beneficial for banner deployment in M3, but introduced additional weight, drag, and reduced control efficiency due to HT-VT flow separation. The single-boom configuration was selected for its favorable balance of manufacturability and mission compatibility, with greater design flexibility to control weight, drag, and stability.</p>
+
+<p>Within that single-boom framework, the same reliability-first logic drove each subsequent configuration choice. Three wing placements were evaluated: the high-wing was selected over mid- and low-wing configurations because it offered superior roll stability, maximized fuselage internal volume for payload access, and simplified integration; a mid-wing would have required a spar through the fuselage, disrupting payload storage entirely. For the tail, the conventional configuration was chosen over the T-tail despite the T-tail’s aerodynamic advantage of operating outside the main wing downwash. The T-tail requires a stronger, heavier vertical structure to resist bending and is significantly more difficult to manufacture. Given that integration quality was the primary FoM, the conventional tail’s robustness outweighed the aerodynamic tradeoff. For landing gear, the tricycle configuration was selected over the taildragger primarily for GM performance; it provides maximum payload accessibility during loading, and prior Wichita competition data confirmed that a well-executed tricycle is sufficiently stable in that environment.</p>
+
+<p>The resulting configuration, high-wing, single-boom, conventional tail, tricycle gear, and single tractor propulsion, represented the most predictable and manufacturable design the team could build given its recent history, while remaining fully competitive within the scoring framework.</p>
+
+
+    
+    
+  </div>
+</article>
+            </main>
+            <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Ishan Roy. All rights reserved.</p>
+  </div>
+</footer>
+
+        </div>
+    </div>
+</body>
+</html>

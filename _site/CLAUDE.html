@@ -119,6 +119,7 @@
 <div class="language-yaml highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="na">subtitle</span><span class="pi">:</span> <span class="s2">"</span><span class="s">Short</span><span class="nv"> </span><span class="s">subtitle</span><span class="nv"> </span><span class="s">shown</span><span class="nv"> </span><span class="s">under</span><span class="nv"> </span><span class="s">title"</span>
 <span class="na">project_link</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://..."</span>   <span class="c1"># Renders a "View Project/Demo" link</span>
 <span class="na">repo_link</span><span class="pi">:</span> <span class="s2">"</span><span class="s">https://..."</span>      <span class="c1"># Renders a "View Code Repository" link</span>
+<span class="na">hide_hero</span><span class="pi">:</span> <span class="no">true</span>                <span class="c1"># Keeps `image` for the /projects/ gallery thumbnail, but suppresses the hero image at the top of this page's own detail view</span>
 </code></pre></div></div>
 
 <p><strong>Content notes:</strong></p>
@@ -285,6 +286,21 @@
   <li>Add image to <code class="language-plaintext highlighter-rouge">assets/images/</code></li>
   <li>Write content in Markdown below the <code class="language-plaintext highlighter-rouge">---</code></li>
 </ol>
+
+<h3 id="hub-and-spoke-projects-subpages">Hub-and-spoke projects (subpages)</h3>
+<p>For a project big enough to need multiple linked pages (e.g. a leadership writeup + a technical writeup for the same team/project), use this pattern rather than inventing a new one:</p>
+<ol>
+  <li>Keep one “hub” page as the normal <code class="language-plaintext highlighter-rouge">_projects/</code> entry (e.g. <code class="language-plaintext highlighter-rouge">dbf_lead.md</code>) — this is what shows up in the main Projects gallery.</li>
+  <li>Create additional pages in <code class="language-plaintext highlighter-rouge">_projects/</code> for each subpage (e.g. <code class="language-plaintext highlighter-rouge">dbf_leadership.md</code>, <code class="language-plaintext highlighter-rouge">dbf_technical.md</code>), each with <code class="language-plaintext highlighter-rouge">layout: project</code> like normal, but add <code class="language-plaintext highlighter-rouge">hidden: true</code> to the front matter.</li>
+  <li><code class="language-plaintext highlighter-rouge">projects.md</code>’s gallery loop skips any project where <code class="language-plaintext highlighter-rouge">project.hidden</code> is true, so subpages don’t show up as their own gallery cards — they’re only reachable via links from the hub page.</li>
+  <li><strong>Underscore-to-hyphen gotcha:</strong> Jekyll’s <code class="language-plaintext highlighter-rouge">:name</code> permalink placeholder slugifies the filename, converting underscores to hyphens. A file named <code class="language-plaintext highlighter-rouge">dbf_leadership.md</code> is served at <code class="language-plaintext highlighter-rouge">/projects/dbf-leadership/</code>, NOT <code class="language-plaintext highlighter-rouge">/projects/dbf_leadership/</code>. When linking to any collection page (hub or subpage), always use hyphens in the URL regardless of how the source filename is written. Easiest fix: name new files with hyphens from the start (<code class="language-plaintext highlighter-rouge">dbf-leadership.md</code>) to avoid the mismatch entirely.</li>
+  <li>On the hub page, link out to subpages with <code class="language-plaintext highlighter-rouge">/Ishan-Roy-Portfolio/projects/&lt;subpage-slug-with-hyphens&gt;/</code>.</li>
+  <li>On each subpage, add a back-link at the top using the existing <code class="language-plaintext highlighter-rouge">.back-arrow</code> class: <code class="language-plaintext highlighter-rouge">&lt;a href="/Ishan-Roy-Portfolio/projects/&lt;hub-slug-with-hyphens&gt;/" class="back-arrow"&gt;← Back to [Project] Overview&lt;/a&gt;</code>.</li>
+</ol>
+
+<p>Example in use: <code class="language-plaintext highlighter-rouge">dbf_lead.md</code> (hub, served at <code class="language-plaintext highlighter-rouge">/projects/dbf-lead/</code>) → <code class="language-plaintext highlighter-rouge">dbf_leadership.md</code> + <code class="language-plaintext highlighter-rouge">dbf_technical.md</code> (hidden subpages, served at <code class="language-plaintext highlighter-rouge">/projects/dbf-leadership/</code> and <code class="language-plaintext highlighter-rouge">/projects/dbf-technical/</code>).</p>
+
+<p>This pattern nests arbitrarily deep — a subpage can itself be a mini-hub. Example: <code class="language-plaintext highlighter-rouge">dbf_technical.md</code> is itself a list of links (no long-form content of its own) pointing to five further <code class="language-plaintext highlighter-rouge">hidden: true</code> pages (<code class="language-plaintext highlighter-rouge">dbf-technical-aircraft.md</code>, <code class="language-plaintext highlighter-rouge">dbf-technical-mdo.md</code>, <code class="language-plaintext highlighter-rouge">dbf-technical-fuselage.md</code>, <code class="language-plaintext highlighter-rouge">dbf-technical-banner.md</code>, <code class="language-plaintext highlighter-rouge">dbf-technical-landing-gear.md</code>), each with its own back-arrow pointing up to <code class="language-plaintext highlighter-rouge">/projects/dbf-technical/</code> (not all the way back to the top-level hub). When nesting, name new files with hyphens from the start to avoid the underscore/slug mismatch above.</p>
 
 <h3 id="add-a-new-report">Add a new report</h3>
 <ol>

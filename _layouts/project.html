@@ -10,7 +10,7 @@ layout: default
   </header>
 
   <div class="entry-content">
-    {% if page.image %}
+    {% if page.image and page.hide_hero != true %}
       <img src="{{ page.image | relative_url }}" alt="{{ page.title }} main image" class="project-main-image">
     {% endif %}
 

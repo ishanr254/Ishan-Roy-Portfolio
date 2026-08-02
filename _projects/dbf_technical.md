@@ -61,7 +61,7 @@ A consistent theme runs through the technical work below: given the team's recen
       text-decoration:none; box-shadow:0 4px 8px rgba(0,0,0,0.1);">
     <h3 style="margin:0 0 8px; color:#fff; font-size:1.1em;">Landing Gear Design (2024–2025) →</h3>
     <p style="margin:0; font-size:0.9em; color:#d8dae3;">
-      My main technical contribution to Jaegerflug (the 2024-25 aircraft), it's landing gear.
+      My main technical contribution to Yaegerflug (the 2024-25 aircraft), it's landing gear.
     </p>
   </a>
 
@@ -71,7 +71,7 @@ A consistent theme runs through the technical work below: given the team's recen
 
 ### Design Reports
 
-The full technical reports from my seasons on the team are available in the [Reports](/reports/) section.
+The full technical reports from my years on the team are available in the [Reports](/reports/) section.
 
 <div class="report-links" style="display:flex; gap:1rem; margin:1rem 0 2rem; flex-wrap:wrap;">
   <a href="{{ site.baseurl }}/reports/dbf-2026/" style="

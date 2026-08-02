@@ -6,13 +6,21 @@ permalink: /coursework/
 
 ## Junior Year
 
+**Spring 2026**
+- **AEM 2020:** Better Decisions
+- **MAE 3240:** Heat Transfer
+- **MAE 3780:** Mechatronics
+- **MAE 4070:** Dynamics of Flight Vehicles
+- **MAE 4510:** Propulsion of Aircraft & Rockets
+- **MAE 4900:** Individual/Group Projects in M.E. (Independent Research)
 
 **Fall 2025**
 - **MAE 3230:** Introductory Fluid Mechanics
 - **MAE 3270:** Mechanics of Engineering Materials
 - **MAE 3260:** System Dynamics
 - **MAE 3050:** Introduction to Aeronautics
-- **CLASS 2064:** Greek Mythology
+- **CLASS 2604:** Greek Mythology
+- **ENGRG 4400:** Project Team Leadership
 
 ---
 
@@ -23,16 +31,16 @@ permalink: /coursework/
 - **MAE 2250:** Intro to Mechanical Design
 - **MAE 2030:** Dynamics
 - **MATH 2940:** Linear Algebra for Engineers
-
-
+- **ENGRG 3400:** EN Student Project Teams (Design Build Fly)
+- **MAE 4900:** Individual/Group Projects in M.E. (Independent Research)
 
 **Fall 2024**
 - **MATH 2930:** Differential Equations for Engineers
 - **ENGRD 2020:** Statics & Mechanics of Solids
 - **ENGRD 2210:** Thermodynamics
 - **ECON 1120:** Into to Macroeconomics
+- **ENGRG 3400:** EN Student Project Teams (Design Build Fly)
 - **PE 1104:** Swim Conditioning
-
 
 ---
 
@@ -44,6 +52,8 @@ permalink: /coursework/
 - **MATH 1920:** Multivariable Calculus for Engineers
 - **ENGRI 1100:** Intro to Engineering: Lasers & Photonics
 - **GOVT 1101:** FWS: The Politics of Outer Space
+- **ENGRG 3400:** EN Student Project Teams (Design Build Fly)
+- **ENGRG 1400:** Project Team Onboarding
 
 **Fall 2023**
 - **CHEM 2090:** Engineering General Chemistry
@@ -55,7 +65,7 @@ permalink: /coursework/
 
 
 <div class="resume-download">
-    <a href="{{ site.baseurl }}/assets/files/Roy_Ishan_Transcript Fall 2025.pdf" class="download-button" download>
+    <a href="{{ site.baseurl }}/assets/files/Roy_Ishan_Transcript Spring 2026.pdf" class="download-button" download>
         Download Transcript (PDF)
     </a>
 </div>

@@ -3,7 +3,8 @@ layout: project
 title: "Carbon Fiber Monocoque Fuselage & Layup Process"
 subtitle: "Structures · AIAA DBF"
 date: 2026-05-05
-image: assets/images/dbf/fuselage_layup.jpg
+image: assets/images/dbf/fusStress.png
+hide_hero: true
 tags: [structures, composites]
 hidden: true
 ---
@@ -32,7 +33,23 @@ DF1 employs a CFRP monocoque consisting of two 3-ply shells fastened together wi
 
  For the 2025-26 competition report, I learned how to perform a structural analysis on the composite fuselage. This analysis was not only used in the report but will also allow us to improve our designs in the future by cutting weight while being able to analytically show they will still perform well. 
 
- Structural performance was verified using ANSYS ACP, evaluating a governing combined loading case that included a distributed wing attachment load of 200 lbf representing a worst-case scenario, longitudinal electronics and tail-induced moments, and a landing load from the landing gear. All other loads were calculated based on a structural limit load factor of 3.5. The composite failure tool indicated a specific FoS of 5.6 against this worst-case loading scenario.
+ Structural performance was verified using ANSYS ACP, evaluating a governing combined loading case that included a distributed wing attachment load of 200 lbf representing a worst-case scenario, longitudinal electronics and tail-induced moments, and a landing load from the landing gear. All other loads were calculated based on a structural limit load factor of 3.5, derived from the V-n diagram below.
+
+<div class="image-block-full">
+  <img src="{{ site.baseurl }}/assets/images/dbf/VnDiagram.png"
+       alt="V-n diagram showing positive and negative limit load factors"
+       class="project-image" style="width:70%; display:block; margin:0 auto;">
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">V-n diagram, positive limit load factor of 3.5</p>
+</div>
+
+The composite failure tool indicated a specific FoS of 5.6 against this worst-case loading scenario.
+
+<div class="image-block-full">
+  <img src="{{ site.baseurl }}/assets/images/dbf/fusStress.png"
+       alt="ANSYS ACP equivalent stress contour on the composite fuselage"
+       class="project-image" style="width:70%; display:block; margin:0 auto;">
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">Equivalent (von-Mises) stress contour, governing load case</p>
+</div>
 
 The decision to carry significant structural margin was deliberate. A FoS of 5.6 is conservative for this type of aircraft, but given that our primary goal for the 2026 competition was to field a reliable  aircraft, the added confidence in structural integrity was judged to be worth the modest weight penalty. However, I hope to use and pass on my new skills during the design of next year's aircraft to engineer a more mass efficient fuselage design.
 

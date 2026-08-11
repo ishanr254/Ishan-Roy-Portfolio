@@ -4,13 +4,21 @@ title: "MATLAB Design Optimization Program"
 subtitle: "Multidisciplinary Design Optimization · AIAA DBF 2025–2026"
 date: 2026-05-04
 image: assets/images/dbf/mdo_code_diagram.jpg
+hide_hero: true
 tags: [MATLAB, optimization, aerodynamics]
 hidden: true
 ---
 
 <a href="{{ site.baseurl }}/projects/dbf-technical/" class="back-arrow">← Back to Technical Projects</a>
 
-The core design tool underlying DF1 is a MATLAB-based high-fidelity multidisciplinary design optimization (MDO) framework that simulates the competition mission profiles and finds an optimal aircraft geometry. The program was developed the summer before the 2025-26 competition cycle by myself and my co-lead with assistance from previous leads. The framework is implemented in MATLAB and organized into modular subsystems that exchange data and perform verification tasks. A 31-variable design vector, defining aircraft geometry and configuration, is passed through each analysis module and ultimately evaluated by a genetic algorithm to identify high-performing designs. The module structure and data flow are shown in the figure above.
+The core design tool underlying DF1 is a MATLAB-based high-fidelity multidisciplinary design optimization (MDO) framework that simulates the competition mission profiles and finds an optimal aircraft geometry. The program was developed the summer before the 2025-26 competition cycle by myself and my co-lead with assistance from previous leads. The framework is implemented in MATLAB and organized into modular subsystems that exchange data and perform verification tasks. A 31-variable design vector, defining aircraft geometry and configuration, is passed through each analysis module and ultimately evaluated by a genetic algorithm to identify high-performing designs. The module structure and data flow are shown in the figure below.
+
+<div class="image-block-full">
+  <img src="{{ site.baseurl }}/assets/images/dbf/mdo_code_diagram.jpg"
+       alt="Block diagram of the MDO framework's modular structure and data flow"
+       class="project-image" style="width:85%; display:block; margin:0 auto;">
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">MDO framework module structure and data flow</p>
+</div>
 
 The aerodynamic module models aerodynamic properties of the aircraft's wings, empennage, and fuselage, combining geometric parameters with propulsion performance and mass properties to compute lift, drag, and aerodynamic moments across the operating envelope, and verifies static and dynamic stability by enforcing stall margin, thrust, and control constraints. The mechanical module estimates mass given dimensions and configuration using empirical models, calculates the aircraft's CG via a weighted average of individual components, and computes the moment of inertia tensor using the parallel axis theorem.
 

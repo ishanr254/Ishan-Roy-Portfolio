@@ -65,7 +65,7 @@ permalink: /coursework/
 
 
 <div class="resume-download">
-    <a href="{{ site.baseurl }}/assets/files/Roy_Ishan_Transcript Spring 2026.pdf" class="download-button" download>
+    <a href="{{ site.baseurl }}/assets/files/Roy_Ishan_Transcript_FA26.pdf" class="download-button" download>
         Download Transcript (PDF)
     </a>
 </div>

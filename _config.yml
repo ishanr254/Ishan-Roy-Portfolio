@@ -2,7 +2,7 @@
 title: Ishan Roy - Engineering Portfolio
 email: irr4@cornell.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  A brief description of your portfolio and your skills.
+  Portfolio of Ishan Roy, a Cornell MechE/Aerospace senior specializing in aircraft design, FEA/CFD analysis, and AIAA Design Build Fly team leadership.
 baseurl: "/Ishan-Roy-Portfolio" # the subpath of your site, e.g. /blog. For GitHub Pages user sites, this is often blank.
 url: "https://ishanr254.github.io" # the base hostname & protocol for your site, e.g. http://example.com. For GitHub Pages, it will be like https://username.github.io
 

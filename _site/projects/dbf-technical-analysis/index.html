@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Structural & CFD Analysis | Ishan Roy - Engineering Portfolio</title>
+    <meta name="description" content="← Back to Technical Projects">
+    <link rel="stylesheet" href="/Ishan-Roy-Portfolio/assets/css/style.css">
+    
+    <!-- Favicon declarations -->
+    <link rel="shortcut icon" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png" sizes="32x32">
+    <link rel="icon" type="image/png" sizes="32x32" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo_favicon.png">
+    
+    <link type="application/atom+xml" rel="alternate" href="http://localhost:4000/Ishan-Roy-Portfolio/feed.xml" title="Ishan Roy - Engineering Portfolio" />
+    <!-- MathJax support for LaTeX equations -->
+    <script id="MathJax-script" async
+      src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js">
+    </script>
+</head>
+<body>
+    <div class="site-container">
+        
+        <aside class="site-sidebar">
+            <div class="sidebar-header">
+                <a class="site-title" href="/Ishan-Roy-Portfolio/">
+                    <img src="/Ishan-Roy-Portfolio/assets/images/Cornell_Logo.png" alt="Ishan Roy - Engineering Portfolio" class="logo-image">
+                </a>
+            </div>
+            <nav class="site-nav">
+  <ul>
+    <li><a href="/Ishan-Roy-Portfolio/" >About Me</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/projects/" class="active">Projects</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/reports/" >Reports</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/cv/" >CV</a></li>
+    <li><a href="/Ishan-Roy-Portfolio/coursework/" >Coursework</a></li>
+    <!-- Add more links here if needed -->
+  </ul>
+</nav>
+        </aside>
+
+        <div class="main-content-area">
+            
+            <main class="content-wrapper">
+                <article class="project-detail">
+  <header class="page-header">
+    <h1>Structural & CFD Analysis</h1>
+    
+      <p class="project-subtitle"><em>Detailed Design Verification · AIAA DBF 2025–2026</em></p>
+    
+  </header>
+
+  <div class="entry-content">
+    
+
+    <p><a href="/Ishan-Roy-Portfolio/projects/dbf-technical/" class="back-arrow">← Back to Technical Projects</a></p>
+
+<p>I verified DF1’s subsystem-level detailed design with a series of FEA and CFD studies in ANSYS, beyond the fuselage and banner-placement analyses covered on their own pages. I ran each of these myself, and results were reviewed by the team before being included in the final design report. Each study fed directly into a go/no-go decision on the corresponding subsystem.</p>
+
+<hr />
+
+<h3 id="wing-assembly-fea">Wing Assembly FEA</h3>
+
+<p>To validate the structural integrity of the wing, I conducted FEA in ANSYS Static Structural on the full wing assembly. I applied a force of 32 lbf, representing the aircraft’s 3.5 structural limit load factor, to the underside of the wing ribs, with a fixed displacement support applied at the base of the wing-fuselage integration piece.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Basswood</th>
+      <th>CFRP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Max deflection (in)</td>
+      <td>0.14</td>
+      <td>0.08</td>
+    </tr>
+    <tr>
+      <td>Max stress (psi)</td>
+      <td>426.78</td>
+      <td>1269.60</td>
+    </tr>
+    <tr>
+      <td>FoS</td>
+      <td>20</td>
+      <td>236</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="image-block-full">
+  <img src="/Ishan-Roy-Portfolio/assets/images/dbf/wingStress.png" alt="ANSYS Static Structural equivalent stress contour on the wing assembly" class="project-image" style="width:70%; display:block; margin:0 auto;" />
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">Wing assembly stress distribution, CFRP configuration</p>
+</div>
+
+<h3 id="empennage-fea">Empennage FEA</h3>
+
+<p>I validated the horizontal and vertical stabilizers in ANSYS Static Structural using an 8 lbf upward load applied to the underside of the horizontal stabilizer, representing a worst-case aggressive maneuvering condition.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th> </th>
+      <th>Basswood</th>
+      <th>CFRP</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Max deflection (in)</td>
+      <td>0.55</td>
+      <td>0.30</td>
+    </tr>
+    <tr>
+      <td>Max stress (psi)</td>
+      <td>2,800</td>
+      <td>13,510</td>
+    </tr>
+    <tr>
+      <td>FoS</td>
+      <td>3</td>
+      <td>22</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="image-block-full">
+  <img src="/Ishan-Roy-Portfolio/assets/images/dbf/tail-stress.png" alt="ANSYS Static Structural equivalent stress contour on the empennage assembly" class="project-image" style="width:70%; display:block; margin:0 auto;" />
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">Empennage stress distribution, CFRP configuration</p>
+</div>
+
+<h3 id="landing-gear-fea">Landing Gear FEA</h3>
+
+<p>I sized the tricycle landing gear to withstand landing loads at DF1’s 7.4 lb MTOW using the same 3.5 landing load factor, then ran FEA on both the main and nose gear assemblies to verify strength margins.</p>
+
+<table>
+  <thead>
+    <tr>
+      <th>FoM</th>
+      <th>Main Gear</th>
+      <th>Front Gear</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>Load (lbf)</td>
+      <td>22.02</td>
+      <td>2.89</td>
+    </tr>
+    <tr>
+      <td>Max Stress (psi)</td>
+      <td>41,000</td>
+      <td>17,300</td>
+    </tr>
+    <tr>
+      <td>FoS</td>
+      <td>7.5</td>
+      <td>2.5</td>
+    </tr>
+  </tbody>
+</table>
+
+<div class="image-block-full">
+  <img src="/Ishan-Roy-Portfolio/assets/images/dbf/mainGear.png" alt="ANSYS Static Structural equivalent stress contour on the main landing gear" class="project-image" style="width:70%; display:block; margin:0 auto;" />
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">Main gear stress distribution</p>
+</div>
+
+<h3 id="landing-gear-fairing-cfd-study">Landing Gear Fairing CFD Study</h3>
+
+<p>I evaluated adding fairings around the landing gear as a potential drag-reduction measure, comparing the baseline gear against a faired configuration in ANSYS Fluent. The results showed a minor drag reduction, main gear drag decreasing from 0.38 lbf to 0.37 lbf (2.6%), but a much larger increase in lift, from 0.08 lbf to 0.27 lbf (238%). The added fairing mass was equivalent to a 0.44 lbf increase in required lift, offsetting the aerodynamic gains, so I concluded fairings weren’t worth incorporating into the competition aircraft.</p>
+
+<div style="display:flex; gap:1rem; clear:both; width:100%; margin:1rem 0 2rem; flex-wrap:wrap;">
+  <div style="flex:1 1 0; min-width:260px;">
+    <img src="/Ishan-Roy-Portfolio/assets/images/dbf/vectors-no-fairing.png" alt="CFD velocity vectors around the baseline landing gear wheel" style="display:block; width:100%; height:auto;" />
+    <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">Baseline (no fairing)</p>
+  </div>
+  <div style="flex:1 1 0; min-width:260px;">
+    <img src="/Ishan-Roy-Portfolio/assets/images/dbf/vectors-fairing.png" alt="CFD velocity vectors around the faired landing gear wheel" style="display:block; width:100%; height:auto;" />
+    <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">With fairing</p>
+  </div>
+</div>
+
+<h3 id="nosecone-motor-cooling-cfd">Nosecone Motor Cooling CFD</h3>
+
+<p>The motor is enclosed within a 3D-printed PLA nosecone mounted to the forward fuselage bulkhead, so I verified thermal performance to ensure adequate cooling. I ran a CFD analysis in ANSYS Fluent at M3 cruise conditions, the lowest-airflow case, which predicted an average internal velocity of 26.25 ft/s through the vented nosecone and motor housing. Using that velocity with the motor’s exposed surface area, I calculated a predicted steady-state motor temperature of 80°F, well below the PLA glass transition temperature of 140°F.</p>
+
+<div class="image-block-full">
+  <img src="/Ishan-Roy-Portfolio/assets/images/dbf/nosecone-airflow-2.png" alt="CFD velocity streamlines showing airflow into the nosecone and motor housing" class="project-image" style="width:80%; display:block; margin:0 auto;" />
+  <p style="text-align:center; font-size:0.85em; color:#666; margin-top:0.4rem;">Nosecone motor cooling airflow, ANSYS Fluent</p>
+</div>
+
+<p>I later confirmed the thermal prediction with wind tunnel testing: motor temperature reached a steady-state of roughly 90°F after about 300 seconds of full-discharge operation, about 10° above the CFD prediction but still well below the PLA glass transition temperature, for a FoS of 1.15.</p>
+
+<hr />
+
+<h3 id="xflr5-verification">XFLR5 Verification</h3>
+
+<p>Alongside the FEA and CFD work above, I used XFLR5 to independently verify decisions coming out of the MDO. The wing taper sensitivity study, showing at most a 1.96% improvement in CL/CD across taper ratios from 0.5 to 1, is covered on the <a href="/Ishan-Roy-Portfolio/projects/dbf-technical-mdo/">MDO Program page</a>.</p>
+
+
+    
+    
+  </div>
+</article>
+            </main>
+            <footer class="site-footer">
+  <div class="container">
+    <p>&copy; 2026 Ishan Roy. All rights reserved.</p>
+  </div>
+</footer>
+
+        </div>
+    </div>
+</body>
+</html>

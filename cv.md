@@ -8,8 +8,6 @@ permalink: /cv/
 
 Cornell MechE senior with hands-on experience in defense industry design engineering and aircraft rapid prototype development.
 
-<!-- CONFIRM: your two resume files use slightly different summary lines here — one says "defense industry design engineering and aircraft rapid prototype development," the other says "eVTOL prototype development and aerospace industry design engineering." Pick whichever framing you want for the general portfolio CV. -->
-
 ## EDUCATION
 <div class="item">
   <div class="item-header">
@@ -19,7 +17,7 @@ Cornell MechE senior with hands-on experience in defense industry design enginee
   <div class="role">Master of Engineering in Aerospace Engineering. Expected Graduation Dec 2027<br>
   Bachelor of Science in Mechanical Engineering. Expected Graduation May 2027</div>
   Courses: Heat Transfer | Fluid Mechanics | System Dynamics | Mechanics of Engineering Materials | Dynamics of Flight Vehicles<br>
-  GPA: 3.59/4.0.
+  GPA: 3.61/4.0.
 </div>
 
 ## EXPERIENCE
@@ -79,8 +77,6 @@ Cornell MechE senior with hands-on experience in defense industry design enginee
   </ul>
 </div>
 
-<!-- CONFIRM: this pulls "first time in 5 years" and "33rd of 200 schools" directly from your resume. Your DBF leadership/overview pages currently say "first time in 3 years" and "33 of 175 entries" — reconcile these across the site. -->
-
 <div class="item">
   <div class="item-header">
     <div class="role"><strong>Mechanical and Structural Subteam Member, Co-Lead</strong></div>
@@ -132,11 +128,11 @@ Cornell MechE senior with hands-on experience in defense industry design enginee
 
 {% if site.baseurl %}
 <div class="resume-download">
-  <a href="{{ site.baseurl }}/assets/files/Ishan_Roy.pdf" class="download-button" download>Download Resume (PDF)</a>
+  <a href="{{ site.baseurl }}/assets/files/Ishan_Roy_2026.pdf" class="download-button" download>Download Resume (PDF)</a>
 </div>
 {% else %}
 <div class="resume-download">
-  <a href="/assets/files/Ishan_Roy.pdf" class="download-button" download>Download Resume (PDF)</a>
+  <a href="/assets/files/Ishan_Roy_2026.pdf" class="download-button" download>Download Resume (PDF)</a>
 </div>
 {% endif %}
 

@@ -4,13 +4,12 @@ title: "Landing Gear Design"
 subtitle: "Mechanical and Structural Subteam Co-Lead · 2024–2025"
 date: 2026-05-07
 image: assets/images/dbf/landing_gear.jpg
+hide_hero: true
 tags: [structures, mechanisms]
 hidden: true
 ---
 
 <a href="{{ site.baseurl }}/projects/dbf-technical/" class="back-arrow">← Back to Technical Projects</a>
-
-<!-- CONFIRM: no 2024-25-specific (Yeagerflug taildragger) landing gear image was in your upload -- mainGear.png in assets/images/dbf/ is actually the 2025-26 DF1 tricycle gear FEA (matches design report Table 5.1.2, 41,000 psi), so it belongs on the new dbf-technical-analysis page, not here. This front-matter image path is still broken; swap in a real photo/render of the 2024-25 strut when you have one. -->
 
 During my year as Mechanical and Structural Subteam Co-Lead, I led the redesign of the landing gear for Yeagerflug, the team's 2024-25 competition aircraft, alongside the team's first composite fuselage. Together these changes reduced overall aircraft weight by 45%.
 

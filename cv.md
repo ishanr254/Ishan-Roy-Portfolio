@@ -24,7 +24,7 @@ Cornell MechE senior with hands-on experience in defense industry design enginee
 <div class="item">
   <div class="item-header">
     <div class="left"><strong>GE Aerospace, Defense Engines and Services, Lynn, MA</strong></div>
-    <div class="date">May – Sep 2026</div>
+    <div class="date">May – Aug 2026</div>
   </div>
   <div class="role"><strong>Intern, Turbofan Turbojet (TFTJ) Mechanical Systems/Structures/Configs Design Engineering Team</strong></div>
   <ul>

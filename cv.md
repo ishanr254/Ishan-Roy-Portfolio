@@ -28,21 +28,21 @@ Cornell MechE senior with hands-on experience in defense industry design enginee
   </div>
   <div class="role"><strong>Intern, Turbofan Turbojet (TFTJ) Mechanical Systems/Structures/Configs Design Engineering Team</strong></div>
   <ul>
-    <li>Perform structural hand-calculation analysis and prepare materials for technical design reviews, along with supporting process engineering efforts across mechanical systems, structures, and configuration teams.</li>
-    <li>Implement a part classification framework adapted from GE's commercial business and present it at Tech Review, the first application of this approach within the defense organization, to support field failure mitigation and component life management.</li>
+    <li>Led effort to implement review of a part fabrication process to support field failure mitigation. Presented proposal to section executives, engine model engineers, and senior project engineers. Received technical and programmatic approval to implement.</li>
+    <li>Performed structural analysis, dispositioned reviews for nonconforming hardware, implemented part drawing improvements, and interfaced with suppliers to support design engineering efforts across mechanical systems, structures, and configuration teams.</li>
   </ul>
 </div>
 
 <div class="item">
   <div class="item-header">
     <div class="left"><strong>Cornell Mechanical &amp; Aerospace Engineering, Magnus Ultralight Project, Ithaca, NY</strong></div>
-    <div class="date">Jan 2025 – May 2026</div>
+    <div class="date">Jan 2025 – Dec 2025</div>
   </div>
   <div class="role"><strong>Team Lead. Advised by Professor Mason Peck and funded by industry partners.</strong></div>
   <ul>
     <li>Led student team tasked with developing a Magnus Effect-powered ultralight electric aircraft for long-distance personal air travel.</li>
     <li>Designed a scale VTOL vehicle capable of consistent performance for data collection, utilizing SOLIDWORKS, ANSYS, and MATLAB.</li>
-    <li>Fabricated and flight-tested prototype, conducting ten five-minute hovers while lifting 4 kg of payload (25% above initial goal).</li>
+    <li>Fabricated and flight-tested several prototypes, showing that the Magnus Effect is not sufficient for sustaining flight at this scale.</li>
     <li>Designed, fabricated, and tested a dynamically balanced, gear-driven hub system for 1,500+ RPM Magnus Effect sphere actuation.</li>
   </ul>
 </div>

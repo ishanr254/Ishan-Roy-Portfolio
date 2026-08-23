@@ -14,9 +14,9 @@ I'm a senior at Cornell finishing a mechanical engineering degree, followed by a
 
 Last year I served as Full Team Co-Lead for Cornell's AIAA Design Build Fly team, directing 40 students and a $35,000 budget. I now work with the team as a senior advisor. Before that I spent two years on the mechanical and structural subteam, where I built the team's first carbon fiber fuselage.
 
-I also led a small student team building a Magnus Effect ultralight aircraft for about a year and a half, advised by Professor Mason Peck.
+I also led a small student team building a Magnus Effect ultralight aircraft through 2025, advised by Professor Mason Peck.
 
-I'm currently interning at GE Aerospace on the defense side, doing structural analysis and part classification work on turbofan and turbojet engines.
+This past summer I interned at GE Aerospace on the defense side, doing structural analysis and nonconformance work on turbofan and turbojet engines.
 
 Outside of engineering, I coach alpine ski racing for kids in Connecticut. I've done this since 2022.
 
